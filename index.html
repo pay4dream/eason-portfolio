@@ -20,6 +20,7 @@
       --dark-2:#131820;
       --cream:#fffaf1;
       --shadow:0 28px 80px rgba(12,14,18,.18);
+      --font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",Arial,sans-serif;
     }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -30,7 +31,7 @@
         linear-gradient(90deg, rgba(17,18,23,.045) 1px, transparent 1px),
         linear-gradient(180deg, #f7f3ea 0%, #e8ece9 52%, #f7f3ea 100%);
       background-size: 72px 72px, auto;
-      font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","PingFang SC","Noto Sans CJK SC",sans-serif;
+      font-family:var(--font-sans);
       font-variant-numeric:tabular-nums;
       text-rendering:optimizeLegibility;
       -webkit-font-smoothing:antialiased;
@@ -64,7 +65,7 @@
     .eyebrow { display:inline-flex; align-items:center; gap:12px; color:#f2c37a; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; margin-bottom:22px; }
     .eyebrow::before { content:""; width:54px; height:1px; background:#f2c37a; }
     h1 {
-      margin:0; font-family:"Hiragino Mincho ProN","Songti SC",serif;
+      margin:0; font-family:var(--font-sans);
       font-size:clamp(54px, 8vw, 112px); line-height:.96; font-weight:520; letter-spacing:0;
     }
     .lead { margin:28px 0 0; max-width:64ch; color:rgba(255,250,241,.76); font-size:17px; line-height:1.78; overflow-wrap:anywhere; }
@@ -93,7 +94,7 @@
     .tile-6, .tile-7 { display:none; }
     section { padding:90px 0; }
     .section-head { margin-bottom:34px; }
-    .section-head h2 { margin:0; font-family:"Hiragino Mincho ProN","Songti SC",serif; font-size:clamp(42px, 6vw, 70px); line-height:1; font-weight:520; }
+    .section-head h2 { margin:0; font-family:var(--font-sans); font-size:clamp(42px, 6vw, 70px); line-height:1; font-weight:620; }
     .featured-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
     .featured-card {
       display:grid; grid-template-columns:1fr; background:var(--panel); border:1px solid var(--line); box-shadow:0 18px 70px rgba(17,18,23,.07);
@@ -110,7 +111,7 @@
     .featured-copy { padding:26px; display:flex; flex-direction:column; }
     .meta-line { display:flex; gap:8px; flex-wrap:wrap; color:var(--blue); font-size:12px; font-weight:850; margin-bottom:14px; }
     .meta-line span { border:1px solid rgba(21,63,147,.18); padding:5px 7px; background:#fff; }
-    .featured-copy h3, .archive-copy h3 { margin:0; font-family:"Hiragino Mincho ProN","Songti SC",serif; font-weight:620; letter-spacing:0; }
+    .featured-copy h3, .archive-copy h3 { margin:0; font-family:var(--font-sans); font-weight:650; letter-spacing:0; }
     .featured-copy h3 { font-size:30px; line-height:1.22; }
     .work-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
     .work-tags span { display:inline-flex; align-items:center; min-height:24px; padding:0 8px; border:1px solid rgba(183,53,45,.2); background:#fff4ec; color:var(--red); font-size:11px; font-weight:900; }
@@ -138,7 +139,7 @@
     .links-row.small .work-link { min-height:30px; padding:0 10px; font-size:11px; }
     footer { padding:34px 0 52px; color:var(--muted); border-top:1px solid var(--line); }
     .fallback-mark { height:100%; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(135deg,#172033,#6d322c); color:#fff; padding:24px; text-align:center; }
-    .fallback-mark b { font-family:"Hiragino Mincho ProN","Songti SC",serif; font-size:54px; line-height:1; }
+    .fallback-mark b { font-family:var(--font-sans); font-size:54px; line-height:1; }
     .fallback-mark span { margin-top:14px; color:rgba(255,255,255,.7); }
     @media (max-width: 980px) {
       .hero-grid, .featured-large { grid-template-columns:1fr; }
@@ -219,7 +220,7 @@
           <span>真人实拍 TVC</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>导演 / 真人实拍TVC管线主导</span><span>Bilibili</span></div>
+          <div class="meta-line"><span>品牌导演</span><span>Bilibili</span></div>
           <h3>原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>从三周年节点切入，把版本情绪、角色记忆和真人影像语言组织成玩家可感知的品牌内容。</p>
@@ -235,7 +236,7 @@
           <span>新年短片 / Shorts 系列</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>Bilibili / YouTube</span></div>
+          <div class="meta-line"><span>创意策划/品牌导演</span><span>Bilibili / YouTube</span></div>
           <h3>原神 2024新年特别TVC「丘丘人的新年假期三部曲」</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>用连续短片结构承接新年情绪，把节庆内容做成可分发、可连续观看的系列化素材。</p>
@@ -250,7 +251,7 @@
           <span>版本TVC</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>YouTube</span></div>
+          <div class="meta-line"><span>创意策划/品牌导演</span><span>YouTube</span></div>
           <h3>原神 5.0TVC「燃动纳塔」</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>用TVC语法放大纳塔版本的速度、热度与视觉冲击，是大型版本传播中的关键影像入口。</p>
@@ -265,7 +266,7 @@
           <span>日本本土明星TVC</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>Bilibili</span></div>
+          <div class="meta-line"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           <h3>原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>把版本信息大众化，以日本本土演员和课堂设定降低理解门槛，服务更广泛的市场认知。</p>
@@ -280,7 +281,7 @@
           <span>实拍动画结合PV</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>内容负责人</span><span>Bilibili</span></div>
+          <div class="meta-line"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           <h3>Tabelog x Genshin 联动PV</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>把餐厅探索、页面玩法、线下体验和角色表达整合为完整用户体验，是IP进入本地生活场景的代表案例。</p>
@@ -295,7 +296,7 @@
           <span>TikTok原生竖屏短剧</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>编剧 / 导演 / 主导落地</span><span>TikTok</span></div>
+          <div class="meta-line"><span>创意策划/导演/编剧</span><span>TikTok</span></div>
           <h3>原神 JP UGC竖屏短剧「末路厨神」</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>以美食为媒介描写IP和玩家间的羁绊，把真人实拍影视化转译为适配短视频平台的连续短剧。</p>
@@ -310,7 +311,7 @@
           <span>旗舰MV</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>总监制</span><span>Bilibili</span></div>
+          <div class="meta-line"><span>制作人</span><span>Bilibili</span></div>
           <h3>原神《月光的彼岸》哥伦比娅日配新曲MV</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>围绕角色、音乐和PUGC动画团队协作，把声优演唱、角色情绪和创作者表达整合成旗舰音乐内容。</p>
@@ -325,7 +326,7 @@
           <span>地上波综艺特番</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>B2B商务 / 节目方向 / 内容创意</span><span>Bilibili</span></div>
+          <div class="meta-line"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           <h3>日本电视台番组「夏日！风的香气？兜风旅行！」</h3>
           <div class="work-tags"><span>米哈游</span></div>
           <p>让游戏IP进入日本电视台综艺语境，把版本主题、旅行叙事和大众娱乐节目结构连接起来。</p>
@@ -340,7 +341,7 @@
           <span>全国地上波特别节目</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>Bilibili</span></div>
+          <div class="meta-line"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           <h3>原神 富士电视台年末全国地上波特别节目</h3>
           <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>把原神IP带入年末地上波节目场景，让游戏内容进入日本大众娱乐渠道。</p>
@@ -355,7 +356,7 @@
           <span>赛事品牌PV</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>导演 / 赛事PV</span><span>YouTube</span></div>
+          <div class="meta-line"><span>导演/摄影</span><span>YouTube</span></div>
           <h3>第五人格 IJL 秋季决赛 PR</h3>
           <div class="work-tags"><span>网易电竞</span><span>第五人格</span></div>
           <p>以决赛节点为核心，把选手、赛事张力和联赛品牌包装成可传播的主视觉影像。</p>
@@ -370,7 +371,7 @@
           <span>世界赛开场PV</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>导演 / 舞台包装</span><span>YouTube</span></div>
+          <div class="meta-line"><span>导演/摄影</span><span>YouTube</span></div>
           <h3>第五人格 COA V Opening Team Leader Trailer</h3>
           <div class="work-tags"><span>网易电竞</span><span>第五人格</span></div>
           <p>以队长和战队身份为叙事入口，把世界赛开场、选手登场和品牌包装合并成单支主推PV。</p>
@@ -416,7 +417,7 @@
           <h3>原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>从三周年节点切入，把版本情绪、角色记忆和真人影像语言组织成玩家可感知的品牌内容。</p>
-          <div class="mini-tags"><span>导演 / 真人实拍TVC管线主导</span><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -430,7 +431,7 @@
           <h3>原神 2024新年特别TVC「丘丘人的新年假期三部曲」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用连续短片结构承接新年情绪，把节庆内容做成可分发、可连续观看的系列化素材。</p>
-          <div class="mini-tags"><span>Bilibili / YouTube</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili / YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1ye411q7Ld/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a><a class="work-link" href="https://youtube.com/shorts/U20OWWVyYYs?si=jKpefFSYd-u8u5Eb" target="_blank" rel="noopener">Shorts 01</a><a class="work-link" href="https://youtube.com/shorts/og0oYhkqC7A?si=LZCx0QvdDUr_TatW" target="_blank" rel="noopener">Shorts 02</a><a class="work-link" href="https://youtube.com/shorts/YZ0TcNZYfIo?si=OiscZOEOe_IJ8l5O" target="_blank" rel="noopener">Shorts 03</a></div>
         </div>
       </article>
@@ -444,7 +445,7 @@
           <h3>原神 5.0TVC「燃动纳塔」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用TVC语法放大纳塔版本的速度、热度与视觉冲击，是大型版本传播中的关键影像入口。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -458,7 +459,7 @@
           <h3>原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把版本信息大众化，以日本本土演员和课堂设定降低理解门槛，服务更广泛的市场认知。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -472,7 +473,7 @@
           <h3>绝区零 公测纪念TVCM</h3>
           <div class="work-tags compact"><span>米哈游</span><span>绝区零</span></div>
           <p>服务新IP公测节点，用TVCM建立日本市场第一波大众认知。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -486,7 +487,7 @@
           <h3>原神「与玛薇卡同行」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>围绕玛薇卡角色气质做真人广告表达，把角色情绪转化为更具冲击力的观看记忆。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -500,7 +501,7 @@
           <h3>Tabelog x Genshin 联动PV</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把餐厅探索、页面玩法、线下体验和角色表达整合为完整用户体验，是IP进入本地生活场景的代表案例。</p>
-          <div class="mini-tags"><span>内容负责人</span><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -514,7 +515,7 @@
           <h3>原神 x 多邻国-Duolingo 合作PV《终极课程》「究極のレッスン」The Ultimate Lesson</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把语言学习产品的幽默感与原神IP语境结合，用合作PV承接跨品牌话题和玩家社群传播。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -528,7 +529,7 @@
           <h3>原神 JP UGC竖屏短剧「末路厨神」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>以美食为媒介描写IP和玩家间的羁绊，把真人实拍影视化转译为适配短视频平台的连续短剧。</p>
-          <div class="mini-tags"><span>编剧 / 导演 / 主导落地</span><span>TikTok</span></div>
+          <div class="mini-tags"><span>创意策划/导演/编剧</span><span>TikTok</span></div>
           <div class="links-row small"><a class="work-link" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">TikTok Lite</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7594750384195767573" target="_blank" rel="noopener">预告</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7605216689411640577" target="_blank" rel="noopener">第12话</a></div>
         </div>
       </article>
@@ -542,7 +543,7 @@
           <h3>原神×Jagariko 联动</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>将IP角色语气和零食消费场景结合，形成轻量、高识别度的日本本地品牌触点。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -556,7 +557,7 @@
           <h3>原神 东京晴空塔联动PV</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把城市地标与IP体验连接起来，让线下联动从活动信息变成可传播的目的地叙事。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -570,7 +571,7 @@
           <h3>绝区零 × 街霸6 制作人对谈</h3>
           <div class="work-tags compact"><span>米哈游</span><span>绝区零</span></div>
           <p>用制作人对谈服务跨作品社群认知，让联动从话题曝光延伸到创作者与玩家都能理解的内容背书。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -584,7 +585,7 @@
           <h3>寿司郎 × 原神小短片系列</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>将同一餐饮联动下的角色短片合并呈现，用连续角色组合承接线下消费场景，让合作内容形成系列记忆而不是零散物料。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV12jHUzHEzF/" target="_blank" rel="noopener">卡齐娜和早柚</a><a class="work-link" href="https://www.bilibili.com/video/BV1mCYAzxE63/" target="_blank" rel="noopener">欧罗伦和瑞希</a></div>
         </div>
       </article>
@@ -598,7 +599,7 @@
           <h3>原神 × 寿司郎 联动动画：心海、五郎</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用动画形式让角色进入餐饮联动场景，提升合作内容的可看性与记忆点。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -612,7 +613,7 @@
           <h3>原神 × 有马温泉 联动宣传CM</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把温泉目的地和IP体验结合，服务区域旅行场景中的品牌触点。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -626,7 +627,7 @@
           <h3>原神日服 × HELLO CYCLING 联动TVC</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把共享单车、城市移动和版本视觉连接起来，为线下出行场景建立可见的IP触点。</p>
-          <div class="mini-tags"><span>Bilibili / 活动页</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili / 活动页</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1vCFLefExy/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a><a class="work-link" href="https://www.hellocycling.jp/campaign/genshin/" target="_blank" rel="noopener">活动页</a></div>
         </div>
       </article>
@@ -640,7 +641,7 @@
           <h3>原神 全球校园活动回顾MV</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把线下校园活动的参与感沉淀为可传播的回顾影像，延展IP与年轻用户的情感连接。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -654,7 +655,7 @@
           <h3>原神 声优节目实拍升级特别节目</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>围绕声优内容的观看体验做实拍升级，让角色、演员和粉丝之间的连接更具现场感。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -668,7 +669,7 @@
           <h3>原神 纳塔AR项目</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把版本视觉与现实空间结合，为纳塔版本传播增加可拍、可分享的体验型入口。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -682,7 +683,7 @@
           <h3>原神音乐会2023「无际之旅的旋律」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用音乐会形态承接IP长期情感资产，让玩家记忆从游戏内容延伸到现场演出和音乐叙事。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -696,7 +697,7 @@
           <h3>原神 角色预告「兹白：常身归于世」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>以角色预告片承载版本人物认知，把叙事、视觉和角色记忆点浓缩进短时长内容。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -710,7 +711,7 @@
           <h3>原神《月光的彼岸》哥伦比娅日配新曲MV</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>围绕角色、音乐和PUGC动画团队协作，把声优演唱、角色情绪和创作者表达整合成旗舰音乐内容。</p>
-          <div class="mini-tags"><span>总监制</span><span>Bilibili</span></div>
+          <div class="mini-tags"><span>制作人</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -724,7 +725,7 @@
           <h3>星穹铁道爵士之夜「S.P.A.R.K.L.E」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>崩坏：星穹铁道</span></div>
           <p>用爵士现场和角色内容结合，服务跨IP音乐表达与玩家社群观看。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -738,7 +739,7 @@
           <h3>崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告</h3>
           <div class="work-tags compact"><span>米哈游</span><span>崩坏：星穹铁道</span></div>
           <p>以电影预告片语法包装游戏内容，把角色、世界观和娱乐类型感压缩成高密度观看入口。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -752,7 +753,7 @@
           <h3>日本电视台番组「夏日！风的香气？兜风旅行！」</h3>
           <div class="work-tags compact"><span>米哈游</span></div>
           <p>让游戏IP进入日本电视台综艺语境，把版本主题、旅行叙事和大众娱乐节目结构连接起来。</p>
-          <div class="mini-tags"><span>B2B商务 / 节目方向 / 内容创意</span><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -766,7 +767,7 @@
           <h3>原神×谜案「谁是盟友，谁是敌人？」</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用悬疑和逃脱游戏机制承接IP世界观，让用户参与从观看转向解谜与现场体验。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -780,7 +781,7 @@
           <h3>纳塔集合！玩原神的人「原人」观察 #3</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用观察类节目结构承接玩家文化，把版本传播与用户画像放到更大众化的观看语境中。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -794,7 +795,7 @@
           <h3>原神 富士电视台年末全国地上波特别节目</h3>
           <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把原神IP带入年末地上波节目场景，让游戏内容进入日本大众娱乐渠道。</p>
-          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="mini-tags"><span>创意策划/品牌导演</span><span>Bilibili</span></div>
           
         </div>
       </article>
@@ -808,7 +809,7 @@
           <h3>《波に乗る風たち》</h3>
           <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
           <p>在日本语境下完成的导演作品，保留跨文化创作与现场执行能力的直接证据。</p>
-          <div class="mini-tags"><span>编剧 / 导演</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/编剧</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -822,7 +823,7 @@
           <h3>老鼠三郎 / ネズミさん（电影《十四天》终章）</h3>
           <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
           <p>电影《十四天》终章片段，以角色、情境和节奏推进小体量故事，是导演作品履历中的独立条目。</p>
-          <div class="mini-tags"><span>编剧 / 导演</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/编剧</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -864,7 +865,7 @@
           <h3>《末日电台》</h3>
           <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
           <p>以声音设计、录音与航拍参与短片制作，补充影像现场中的技术岗位履历。</p>
-          <div class="mini-tags"><span>声音设计 / 录音师 / 航拍师</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>声音指导</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=vKTIPnXaOcE" target="_blank" rel="noopener">《末日电台》</a><a class="work-link" href="https://www.youtube.com/watch?v=edsTErCMpGE" target="_blank" rel="noopener">末日电台 Last Day</a></div>
         </div>
       </article>
@@ -878,7 +879,7 @@
           <h3>《给我一点甜》</h3>
           <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
           <p>公开纪录片作品入口，作为影视作品中的独立条目保留。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -892,7 +893,7 @@
           <h3>第五人格 IJL 秋季决赛 PR</h3>
           <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
           <p>以决赛节点为核心，把选手、赛事张力和联赛品牌包装成可传播的主视觉影像。</p>
-          <div class="mini-tags"><span>导演 / 赛事PV</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/摄影</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -906,7 +907,7 @@
           <h3>第五人格 COA V Opening Team Leader Trailer</h3>
           <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
           <p>以队长和战队身份为叙事入口，把世界赛开场、选手登场和品牌包装合并成单支主推PV。</p>
-          <div class="mini-tags"><span>导演 / 舞台包装</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/摄影</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -920,7 +921,7 @@
           <h3>第五人格 赛事品牌PV与舞台包装补充</h3>
           <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
           <p>补充展示同一赛事内容系统中的公开入口，保留联赛品牌、舞台包装和选手内容的持续建设证据。</p>
-          <div class="mini-tags"><span>导演 / 内容建设</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/摄影</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=jmnnMHgzMa0" target="_blank" rel="noopener">2023夏季IJL PV</a><a class="work-link" href="https://www.youtube.com/watch?v=wW7IX9nOGkI" target="_blank" rel="noopener">Team Stage Show Bumper</a><a class="work-link" href="https://www.youtube.com/watch?v=r9LL5G4rSHo" target="_blank" rel="noopener">COA V 韩国地区PV</a><a class="work-link" href="https://www.youtube.com/watch?v=oHDeqNhjJ-Q" target="_blank" rel="noopener">冠军奖杯</a><a class="work-link" href="https://www.youtube.com/watch?v=Nr1my3p36Ks" target="_blank" rel="noopener">COA V 世界决赛PV</a><a class="work-link" href="https://www.youtube.com/watch?v=tH_gAQSRM1g" target="_blank" rel="noopener">2022夏季Best3</a><a class="work-link" href="https://www.youtube.com/watch?v=relIkHYx5IA" target="_blank" rel="noopener">2022秋季Opening</a><a class="work-link" href="https://www.youtube.com/watch?v=qNj1_jeu--c" target="_blank" rel="noopener">2023 IJL Autumn PV</a></div>
         </div>
       </article>
@@ -934,7 +935,7 @@
           <h3>第五人格 赛事纪录片与选手内容</h3>
           <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
           <p>围绕选手、战队和赛事情绪建立叙事，让电竞内容从赛果传播延展到人物与社群关系。</p>
-          <div class="mini-tags"><span>导演 / 纪录片内容</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/摄影</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=Yjwt7qU8kUw" target="_blank" rel="noopener">COA V 决胜纪录片</a><a class="work-link" href="https://www.youtube.com/watch?v=i-jbfKwjgVA" target="_blank" rel="noopener">SST_Alf 密着</a><a class="work-link" href="https://www.youtube.com/watch?v=O5KtkBjjR38" target="_blank" rel="noopener">SZ_Sinami 密着</a><a class="work-link" href="https://www.youtube.com/watch?v=sA45PYsVcDM" target="_blank" rel="noopener">2022 IJL Autumn Documentary</a></div>
         </div>
       </article>
@@ -948,7 +949,7 @@
           <h3>第五人格 现场节目与联赛直播内容</h3>
           <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
           <p>从联赛直播、现场节目到艺人开幕式，支撑日本电竞内容从直播技术到节目化表达的搭建。</p>
-          <div class="mini-tags"><span>舞台导演 / 直播内容</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/摄影；导播/摄影指导</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=9KpO7N3QgCQ" target="_blank" rel="noopener">旅IJL 第3回</a><a class="work-link" href="https://www.youtube.com/watch?v=dAqeYAtsNpE" target="_blank" rel="noopener">IJLスター運動会2022</a><a class="work-link" href="https://www.youtube.com/watch?v=hfm3kAYCx2E" target="_blank" rel="noopener">DEAN FUJIOKA 开幕式</a><a class="work-link" href="https://www.youtube.com/watch?v=rbdAyAH30ag" target="_blank" rel="noopener">2022秋季IJL Playoff Day1</a><a class="work-link" href="https://www.youtube.com/watch?v=vxtfcvNd6oY" target="_blank" rel="noopener">2022夏季IJL 决胜战</a></div>
         </div>
       </article>
@@ -962,7 +963,7 @@
           <h3>第五人格 音乐与粉丝向内容</h3>
           <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
           <p>把联赛节点、音乐内容和粉丝向叙事结合，补足电竞内容的情绪记忆与社群传播。</p>
-          <div class="mini-tags"><span>内容导演 / 协作推进</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/摄影</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=mSc_ZMaPmww" target="_blank" rel="noopener">COA VI「未来エコー」</a><a class="work-link" href="https://www.youtube.com/watch?v=9lEOpM513ME" target="_blank" rel="noopener">2021秋季IVC推理劇場</a><a class="work-link" href="https://www.youtube.com/watch?v=MCMU8ekalY0" target="_blank" rel="noopener">V for Victory</a></div>
         </div>
       </article>
@@ -990,7 +991,7 @@
           <h3>NIKKE 相关公开内容</h3>
           <div class="work-tags compact"><span>其他商业作品</span><span>NIKKE</span></div>
           <p>作为其他商业作品中的公开片源入口保留。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=pjMS3rUpja0" target="_blank" rel="noopener">半周年纪念视频</a><a class="work-link" href="https://www.youtube.com/watch?v=R9rW0ijLLQw" target="_blank" rel="noopener">ドロシー50年前のエピソード</a></div>
         </div>
       </article>
@@ -1004,7 +1005,7 @@
           <h3>商业 / 游戏PV补充</h3>
           <div class="work-tags compact"><span>其他商业作品</span><span>CODM</span></div>
           <p>作为其他商业作品中的公开片源入口保留，只展示可公开访问的视频链接。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -1018,7 +1019,7 @@
           <h3>一人旅系列</h3>
           <div class="work-tags compact"><span>其他商业作品</span></div>
           <p>将 Shinjuku Gyoen 与 KaguraSki 两支旅行影像合并为同一系列入口，展示轻量旅行内容与运动场景下的个人影像样本。</p>
-          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="mini-tags"><span>策划/导演</span><span>YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=EUTge7eleqE" target="_blank" rel="noopener">一人旅 - Shinjuku Gyoen</a><a class="work-link" href="https://www.youtube.com/watch?v=k7AWZxFSRg4" target="_blank" rel="noopener">一人旅 - KaguraSki</a></div>
         </div>
       </article>
@@ -1032,7 +1033,7 @@
           <h3>《琴中剑》</h3>
           <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
           <p>学生时期武侠短片摄影作品，补充导演作品之外的类型片现场履历。</p>
-          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>摄影指导</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -1046,7 +1047,7 @@
           <h3>《江城》</h3>
           <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
           <p>本科毕业作品，以城市经验和人物关系为核心展开叙事。获首届“中山杯”微电影大赛最佳新人影片奖。</p>
-          <div class="mini-tags"><span>剧本 / 导演</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/编剧</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -1060,7 +1061,7 @@
           <h3>《冷江》</h3>
           <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
           <p>学生时期短片摄影作品，作为早期影像现场与摄影执行能力的公开片源入口保留。</p>
-          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>摄影指导</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -1074,7 +1075,7 @@
           <h3>《热面》</h3>
           <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
           <p>学生时期短片现场作品，担任摄影、灯光与声音设计，体现一线制作环节的综合执行能力。</p>
-          <div class="mini-tags"><span>摄影 / 灯光 / 声音设计</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>摄影指导</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -1088,7 +1089,7 @@
           <h3>《爱之梦》</h3>
           <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
           <p>大三导演课作业。获 2014 华人草根创意微电影金善奖金奖，并获最佳导演、最佳摄影、最佳剪辑、最佳音效、最佳美术设计等技术类奖项提名。</p>
-          <div class="mini-tags"><span>剧本 / 导演 / 摄影 / 剪辑 / 配乐</span><span>YouTube</span></div>
+          <div class="mini-tags"><span>导演/编剧/摄影</span><span>YouTube</span></div>
           
         </div>
       </article>
@@ -1102,7 +1103,7 @@
           <h3>《我系侦探》</h3>
           <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
           <p>大二电影摄影课与剪辑课联合作业。获首届佳能全国高校影像作品大赛铜奖，入围第 21 届北京大学生电影节原创作品大赛。</p>
-          <div class="mini-tags"><span>编剧 / 导演 / 摄影</span><span>Bilibili</span></div>
+          <div class="mini-tags"><span>导演/编剧/摄影</span><span>Bilibili</span></div>
           
         </div>
       </article>
