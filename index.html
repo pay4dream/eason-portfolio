@@ -48,7 +48,7 @@
       box-shadow:0 20px 80px rgba(0,0,0,.18);
     }
     .nav strong { font-size:13px; letter-spacing:.04em; }
-    .nav-links { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+      .nav-links { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
     .nav-links a { padding:7px 10px; color:rgba(255,250,241,.72); font-size:12px; border:1px solid transparent; }
     .nav-links a:hover { color:#fff; border-color:rgba(255,250,241,.22); }
     .hero {
@@ -91,16 +91,9 @@
     .tile-4 { grid-column:1; grid-row:3; }
     .tile-5 { grid-column:2; grid-row:3; }
     .tile-6, .tile-7 { display:none; }
-    .signal-strip {
-      display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin-top:54px; border:1px solid rgba(255,250,241,.18); background:rgba(255,250,241,.18);
-    }
-    .signal-strip div { background:rgba(255,250,241,.08); padding:18px; min-height:118px; }
-    .signal-strip b { display:block; color:#f2c37a; font-size:30px; line-height:1; }
-    .signal-strip span { display:block; margin-top:10px; color:rgba(255,250,241,.7); font-size:13px; line-height:1.45; }
     section { padding:90px 0; }
-    .section-head { display:grid; grid-template-columns:.36fr .64fr; gap:44px; align-items:end; margin-bottom:34px; }
+    .section-head { margin-bottom:34px; }
     .section-head h2 { margin:0; font-family:"Hiragino Mincho ProN","Songti SC",serif; font-size:clamp(42px, 6vw, 70px); line-height:1; font-weight:520; }
-    .section-head p { margin:0; color:var(--muted); font-size:15px; line-height:1.8; }
     .featured-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
     .featured-card {
       display:grid; grid-template-columns:1fr; background:var(--panel); border:1px solid var(--line); box-shadow:0 18px 70px rgba(17,18,23,.07);
@@ -119,6 +112,10 @@
     .meta-line span { border:1px solid rgba(21,63,147,.18); padding:5px 7px; background:#fff; }
     .featured-copy h3, .archive-copy h3 { margin:0; font-family:"Hiragino Mincho ProN","Songti SC",serif; font-weight:620; letter-spacing:0; }
     .featured-copy h3 { font-size:30px; line-height:1.22; }
+    .work-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+    .work-tags span { display:inline-flex; align-items:center; min-height:24px; padding:0 8px; border:1px solid rgba(183,53,45,.2); background:#fff4ec; color:var(--red); font-size:11px; font-weight:900; }
+    .work-tags.compact { margin-top:9px; }
+    .work-tags.compact span { min-height:22px; padding:0 7px; font-size:10px; }
     .featured-copy p { margin:14px 0 0; color:#353a3e; font-size:15px; line-height:1.78; }
     .featured-copy .proof { color:var(--red); font-weight:850; }
     .links-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:20px; }
@@ -139,32 +136,19 @@
     .mini-tags span { border:1px solid var(--line); background:#fff; color:var(--muted); font-size:11px; padding:5px 6px; line-height:1.2; }
     .links-row.small { padding-top:14px; }
     .links-row.small .work-link { min-height:30px; padding:0 10px; font-size:11px; }
-    .system {
-      background:var(--dark); color:var(--cream);
-      border-top:1px solid rgba(255,250,241,.14); border-bottom:1px solid rgba(255,250,241,.14);
-    }
-    .system .section-head p { color:rgba(255,250,241,.68); }
-    .system-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:18px; }
-    .system-panel { border:1px solid rgba(255,250,241,.16); background:rgba(255,255,255,.045); padding:28px; min-height:260px; }
-    .system-panel h3 { margin:0; color:#f2c37a; font-size:14px; letter-spacing:.12em; text-transform:uppercase; }
-    .system-panel p { color:rgba(255,250,241,.72); line-height:1.85; }
-    .cap-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,250,241,.16); border:1px solid rgba(255,250,241,.16); }
-    .cap-grid div { background:#10151d; padding:20px; min-height:130px; }
-    .cap-grid b { display:block; color:#fff; margin-bottom:9px; }
-    .cap-grid span { color:rgba(255,250,241,.64); font-size:13px; line-height:1.65; }
-    .source-note { margin-top:24px; color:var(--muted); font-size:13px; line-height:1.7; }
     footer { padding:34px 0 52px; color:var(--muted); border-top:1px solid var(--line); }
     .fallback-mark { height:100%; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(135deg,#172033,#6d322c); color:#fff; padding:24px; text-align:center; }
     .fallback-mark b { font-family:"Hiragino Mincho ProN","Songti SC",serif; font-size:54px; line-height:1; }
     .fallback-mark span { margin-top:14px; color:rgba(255,255,255,.7); }
     @media (max-width: 980px) {
-      .hero-grid, .section-head, .featured-large, .system-grid { grid-template-columns:1fr; }
-      .hero-board { grid-template-columns:1fr 1fr; grid-template-rows:180px 140px 160px; transform:none; }
+      .hero-grid, .featured-large { grid-template-columns:1fr; }
+      .hero-board { grid-template-columns:1fr 1fr; grid-template-rows:180px 140px 160px 140px; transform:none; }
       .tile-1 { grid-column:1 / 3; grid-row:1; }
       .tile-2 { grid-column:1; grid-row:2; }
       .tile-3 { grid-column:2; grid-row:2 / 4; }
       .tile-4 { grid-column:1; grid-row:3; }
-      .archive-grid, .featured-grid, .signal-strip { grid-template-columns:1fr 1fr; }
+      .tile-5 { grid-column:1 / 3; grid-row:4; }
+      .archive-grid, .featured-grid { grid-template-columns:1fr 1fr; }
       .featured-large { grid-column:auto; }
     }
     @media (max-width: 640px) {
@@ -176,9 +160,14 @@
       .lead { overflow-wrap:anywhere; word-break:break-all; max-width:330px; }
       .hero { padding-top:138px; }
       .lead { font-size:15px; }
-      .hero-board { grid-template-columns:1fr; grid-template-rows:auto; }
-      .hero-tile, .tile-1, .tile-2, .tile-3, .tile-4 { grid-column:auto; grid-row:auto; min-height:210px; }
-      .signal-strip, .archive-grid, .featured-grid, .cap-grid { grid-template-columns:1fr; }
+      .hero-board { grid-template-columns:1fr 1fr; grid-template-rows:160px 138px 138px; gap:8px; }
+      .hero-tile, .tile-1, .tile-2, .tile-3, .tile-4, .tile-5 { min-height:0; }
+      .tile-1 { grid-column:1 / 3; grid-row:1; }
+      .tile-2 { grid-column:1; grid-row:2; }
+      .tile-3 { grid-column:2; grid-row:2; }
+      .tile-4 { grid-column:1; grid-row:3; }
+      .tile-5 { grid-column:2; grid-row:3; }
+      .archive-grid, .featured-grid { grid-template-columns:1fr; }
       .featured-media, .featured-large .featured-media { min-height:260px; }
       section { padding:64px 0; }
       .filters { top:74px; overflow-x:auto; flex-wrap:nowrap; }
@@ -190,9 +179,9 @@
   <nav class="nav" aria-label="作品集导航">
     <strong>劉一森 / Eason LAU</strong>
     <div class="nav-links">
-      <a href="#featured">重点作品</a>
-      <a href="#archive">全量作品</a>
-      <a href="#system">能力结构</a>
+      <a href="index.html#featured">HIGHLIGHT WORKS</a>
+      <a href="index.html#archive">更多作品</a>
+      <a href="index.html#featured-pay4dream-aigc-workstation">AI TOOL</a>
       <a href="mailto:liudongxuan@gmail.com">联系</a>
     </div>
   </nav>
@@ -203,560 +192,921 @@
         <div>
           <div class="eyebrow">Public Portfolio</div>
           <h1>把IP内容<br>推进到真实市场</h1>
-          <p class="lead">公开作品集覆盖电视广告、地上波节目、异业联动、竖屏短剧、音乐影像、线下触点和其他IP内容。每个条目保留公开链接，重点项目以视频封面或官方缩略图作为视觉证据。</p>
+          <p class="lead">公开作品集覆盖TVC、UGC/PUGC、PGC、电视/综艺节目、影视作品、学生时期作品、网易电竞、AI工具项目与其他商业作品；作品仅选取可公开访问的代表内容，未覆盖完整项目经历。</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#featured">查看重点作品</a>
-            <a class="btn" href="#archive">打开全量索引</a>
+            <a class="btn primary" href="index.html#featured">查看 HIGHLIGHT WORKS</a>
+            <a class="btn" href="#archive">打开更多作品</a>
           </div>
         </div>
-        <div class="hero-board" aria-label="重点作品视觉板">
-          <a class="hero-tile tile-1" href="https://www.bilibili.com/video/BV1U84y1U7uS/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener" data-label="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」"><img src="assets/works/genshin-41-anniversary-tvc.jpg" alt="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」 封面" loading="lazy" /></a><a class="hero-tile tile-2" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener" data-label="日本电视台番组「夏日！风的香气？兜风旅行！」"><img src="assets/works/ntv-drive-trip.jpg" alt="日本电视台番组「夏日！风的香气？兜风旅行！」 封面" loading="lazy" /></a><a class="hero-tile tile-3" href="https://www.bilibili.com/video/BV1ye411q7Ld/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener" data-label="原神 2024新年特别TVC「丘丘人的新年假期三部曲」"><img src="assets/works/genshin-new-year-2024.jpg" alt="原神 2024新年特别TVC「丘丘人的新年假期三部曲」 封面" loading="lazy" /></a><a class="hero-tile tile-4" href="https://youtu.be/eibWLZ0kZGw?si=6jIwJnUw2n0PxCs0" target="_blank" rel="noopener" data-label="原神 5.0TVC「燃动纳塔」"><img src="assets/works/genshin-50-blaze-natlan.jpg" alt="原神 5.0TVC「燃动纳塔」 封面" loading="lazy" /></a><a class="hero-tile tile-5" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener" data-label="Tabelog x Genshin 联动PV"><img src="assets/works/genshin-tabelog.jpg" alt="Tabelog x Genshin 联动PV 封面" loading="lazy" /></a><a class="hero-tile tile-6" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener" data-label="原神《月光的彼岸》哥伦比娅日配新曲MV"><img src="assets/works/columbina-moonlight-mv.jpg" alt="原神《月光的彼岸》哥伦比娅日配新曲MV 封面" loading="lazy" /></a><a class="hero-tile tile-7" href="https://www.bilibili.com/video/BV1uZHDzAE22" target="_blank" rel="noopener" data-label="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）"><img src="assets/works/genshin-moon-class.jpg" alt="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人） 封面" loading="lazy" /></a>
+        <div class="hero-board" aria-label="HIGHLIGHT WORKS 视觉板">
+          <a class="hero-tile tile-1" href="#featured-columbina-moonlight-mv" data-label="原神《月光的彼岸》哥伦比娅日配新曲MV"><img src="assets/works/columbina-moonlight-mv.jpg" alt="原神《月光的彼岸》哥伦比娅日配新曲MV 封面" loading="lazy" /></a><a class="hero-tile tile-2" href="#featured-genshin-new-year-2024" data-label="原神 2024新年特别TVC「丘丘人的新年假期三部曲」"><img src="assets/works/genshin-new-year-2024.jpg" alt="原神 2024新年特别TVC「丘丘人的新年假期三部曲」 封面" loading="lazy" /></a><a class="hero-tile tile-3" href="#featured-genshin-tiktok-drama" data-label="原神 JP UGC竖屏短剧「末路厨神」"><img src="assets/works/genshin-tiktok-drama.png" alt="原神 JP UGC竖屏短剧「末路厨神」 封面" loading="lazy" /></a><a class="hero-tile tile-4" href="#featured-genshin-moon-class" data-label="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）"><img src="assets/works/genshin-moon-class.jpg" alt="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人） 封面" loading="lazy" /></a><a class="hero-tile tile-5" href="#featured-genshin-tabelog" data-label="Tabelog x Genshin 联动PV"><img src="assets/works/genshin-tabelog.jpg" alt="Tabelog x Genshin 联动PV 封面" loading="lazy" /></a>
         </div>
-      </div>
-      <div class="signal-strip" aria-label="作品集统计">
-        <div><b>28</b><span>公开作品条目，覆盖用户提供的全量清单</span></div>
-        <div><b>34</b><span>公开访问入口，含 Bilibili / YouTube / TikTok / 活动页</span></div>
-        <div><b>9</b><span>重点作品，以大图卡片展示视觉魅力</span></div>
-        <div><b>7</b><span>内容形态分类，便于按投递重点浏览</span></div>
       </div>
     </div>
   </header>
 
   <main>
+    
     <section class="wrap" id="featured">
       <div class="section-head">
-        <h2>重点作品</h2>
-        <p>重点项目不只展示标题，而是把“画面、形式、角色范围、公开入口”放在同一屏里。这里避免把团队成果写成个人KPI，只保留已有简历内容与公开链接能支撑的信息。</p>
+          <h2>HIGHLIGHT WORKS</h2>
       </div>
       <div class="featured-grid">
         
-      <article class="featured-card featured-large">
+      <article class="featured-card featured-large" id="featured-genshin-41-anniversary-tvc">
         <a class="featured-media" href="https://www.bilibili.com/video/BV1U84y1U7uS/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-41-anniversary-tvc.jpg" alt="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」 封面" loading="lazy" />
+          <img src="assets/works/genshin-41-anniversary-tvc.png" alt="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」 封面" loading="lazy" />
           <span>真人实拍 TVC</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>TVC / CM</span><span>导演 / 真人实拍TVC管线主导</span></div>
+          <div class="meta-line"><span>导演 / 真人实拍TVC管线主导</span><span>Bilibili</span></div>
           <h3>原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>从三周年节点切入，把版本情绪、角色记忆和真人影像语言组织成玩家可感知的品牌内容。</p>
           
-          <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1U84y1U7uS/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a></div>
+          
         </div>
       </article>
     
         
-      <article class="featured-card ">
-        <a class="featured-media" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
-          <img src="assets/works/ntv-drive-trip.jpg" alt="日本电视台番组「夏日！风的香气？兜风旅行！」 封面" loading="lazy" />
-          <span>地上波综艺特番</span>
-        </a>
-        <div class="featured-copy">
-          <div class="meta-line"><span>地上波 / 节目</span><span>B2B商务 / 节目方向 / 内容创意</span></div>
-          <h3>日本电视台番组「夏日！风的香气？兜风旅行！」</h3>
-          <p>让游戏IP进入日本电视台综艺语境，把版本主题、旅行叙事和大众娱乐节目结构连接起来。</p>
-          
-          <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="featured-card ">
+      <article class="featured-card " id="featured-genshin-new-year-2024">
         <a class="featured-media" href="https://www.bilibili.com/video/BV1ye411q7Ld/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
           <img src="assets/works/genshin-new-year-2024.jpg" alt="原神 2024新年特别TVC「丘丘人的新年假期三部曲」 封面" loading="lazy" />
           <span>新年短片 / Shorts 系列</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>TVC / CM</span><span>真人实拍TVC管线</span></div>
+          <div class="meta-line"><span>Bilibili / YouTube</span></div>
           <h3>原神 2024新年特别TVC「丘丘人的新年假期三部曲」</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>用连续短片结构承接新年情绪，把节庆内容做成可分发、可连续观看的系列化素材。</p>
           
           <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1ye411q7Ld/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a><a class="work-link" href="https://youtube.com/shorts/U20OWWVyYYs?si=jKpefFSYd-u8u5Eb" target="_blank" rel="noopener">Shorts 01</a><a class="work-link" href="https://youtube.com/shorts/og0oYhkqC7A?si=LZCx0QvdDUr_TatW" target="_blank" rel="noopener">Shorts 02</a><a class="work-link" href="https://youtube.com/shorts/YZ0TcNZYfIo?si=OiscZOEOe_IJ8l5O" target="_blank" rel="noopener">Shorts 03</a></div>
         </div>
       </article>
     
-      <article class="featured-card ">
+      <article class="featured-card " id="featured-genshin-50-blaze-natlan">
         <a class="featured-media" href="https://youtu.be/eibWLZ0kZGw?si=6jIwJnUw2n0PxCs0" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-50-blaze-natlan.jpg" alt="原神 5.0TVC「燃动纳塔」 封面" loading="lazy" />
+          <img src="assets/works/genshin-50-blaze-natlan.png" alt="原神 5.0TVC「燃动纳塔」 封面" loading="lazy" />
           <span>版本TVC</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>TVC / CM</span><span>全球版本传播内容</span></div>
+          <div class="meta-line"><span>YouTube</span></div>
           <h3>原神 5.0TVC「燃动纳塔」</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>用TVC语法放大纳塔版本的速度、热度与视觉冲击，是大型版本传播中的关键影像入口。</p>
           
-          <div class="links-row"><a class="work-link" href="https://youtu.be/eibWLZ0kZGw?si=6jIwJnUw2n0PxCs0" target="_blank" rel="noopener">YouTube</a></div>
+          
         </div>
       </article>
     
-      <article class="featured-card ">
-        <a class="featured-media" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-tabelog.jpg" alt="Tabelog x Genshin 联动PV 封面" loading="lazy" />
-          <span>实拍动画结合PV</span>
-        </a>
-        <div class="featured-copy">
-          <div class="meta-line"><span>联动 / 线下</span><span>内容负责人</span></div>
-          <h3>Tabelog x Genshin 联动PV</h3>
-          <p>把餐厅探索、页面玩法、线下体验和角色表达整合为完整用户体验，是IP进入本地生活场景的代表案例。</p>
-          <p class="proof">Tabelog曝光1.5亿 / SNS曝光3,159万 / PV播放1,227万 / 兑换率78%</p>
-          <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="featured-card ">
-        <a class="featured-media" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener">
-          <img src="assets/works/columbina-moonlight-mv.jpg" alt="原神《月光的彼岸》哥伦比娅日配新曲MV 封面" loading="lazy" />
-          <span>旗舰MV</span>
-        </a>
-        <div class="featured-copy">
-          <div class="meta-line"><span>MV / 音乐 / 声优</span><span>总监制</span></div>
-          <h3>原神《月光的彼岸》哥伦比娅日配新曲MV</h3>
-          <p>围绕角色、音乐和PUGC动画团队协作，把声优演唱、角色情绪和创作者表达整合成旗舰音乐内容。</p>
-          <p class="proof">全平台自然播放1,300万+ / 自然话题投稿16,950 / Spotify点击率高于品类均值+11%</p>
-          <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="featured-card ">
+      <article class="featured-card " id="featured-genshin-moon-class">
         <a class="featured-media" href="https://www.bilibili.com/video/BV1uZHDzAE22" target="_blank" rel="noopener">
           <img src="assets/works/genshin-moon-class.jpg" alt="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人） 封面" loading="lazy" />
           <span>日本本土明星TVC</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>TVC / CM</span><span>JP TVC / 本地明星内容</span></div>
+          <div class="meta-line"><span>Bilibili</span></div>
           <h3>原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>把版本信息大众化，以日本本土演员和课堂设定降低理解门槛，服务更广泛的市场认知。</p>
           
-          <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1uZHDzAE22" target="_blank" rel="noopener">Bilibili</a></div>
+          
         </div>
       </article>
     
-      <article class="featured-card ">
+      <article class="featured-card " id="featured-genshin-tabelog">
+        <a class="featured-media" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-tabelog.jpg" alt="Tabelog x Genshin 联动PV 封面" loading="lazy" />
+          <span>实拍动画结合PV</span>
+        </a>
+        <div class="featured-copy">
+          <div class="meta-line"><span>内容负责人</span><span>Bilibili</span></div>
+          <h3>Tabelog x Genshin 联动PV</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
+          <p>把餐厅探索、页面玩法、线下体验和角色表达整合为完整用户体验，是IP进入本地生活场景的代表案例。</p>
+          <p class="proof">Tabelog曝光1.5亿 / SNS曝光3,159万 / PV播放1,227万 / 兑换率78%</p>
+          
+        </div>
+      </article>
+    
+      <article class="featured-card " id="featured-genshin-tiktok-drama">
         <a class="featured-media" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-tiktok-drama.png" alt="原神 JP UGC竖屏短剧「末路厨神」 封面" loading="lazy" />
           <span>TikTok原生竖屏短剧</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>UGC / PUGC</span><span>编剧 / 导演 / 主导落地</span></div>
+          <div class="meta-line"><span>编剧 / 导演 / 主导落地</span><span>TikTok</span></div>
           <h3>原神 JP UGC竖屏短剧「末路厨神」</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>以美食为媒介描写IP和玩家间的羁绊，把真人实拍影视化转译为适配短视频平台的连续短剧。</p>
           <p class="proof">单集平均约60万播放 / 互动率、完播率远高于目标</p>
           <div class="links-row"><a class="work-link" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">TikTok Lite</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7594750384195767573" target="_blank" rel="noopener">预告</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7605216689411640577" target="_blank" rel="noopener">第12话</a></div>
         </div>
       </article>
     
-      <article class="featured-card ">
+      <article class="featured-card " id="featured-columbina-moonlight-mv">
+        <a class="featured-media" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener">
+          <img src="assets/works/columbina-moonlight-mv.jpg" alt="原神《月光的彼岸》哥伦比娅日配新曲MV 封面" loading="lazy" />
+          <span>旗舰MV</span>
+        </a>
+        <div class="featured-copy">
+          <div class="meta-line"><span>总监制</span><span>Bilibili</span></div>
+          <h3>原神《月光的彼岸》哥伦比娅日配新曲MV</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
+          <p>围绕角色、音乐和PUGC动画团队协作，把声优演唱、角色情绪和创作者表达整合成旗舰音乐内容。</p>
+          <p class="proof">全平台自然播放1,300万+ / 自然话题投稿16,950 / Spotify点击率高于品类均值+11%</p>
+          
+        </div>
+      </article>
+    
+      <article class="featured-card " id="featured-ntv-drive-trip">
+        <a class="featured-media" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
+          <img src="assets/works/ntv-drive-trip.jpg" alt="日本电视台番组「夏日！风的香气？兜风旅行！」 封面" loading="lazy" />
+          <span>地上波综艺特番</span>
+        </a>
+        <div class="featured-copy">
+          <div class="meta-line"><span>B2B商务 / 节目方向 / 内容创意</span><span>Bilibili</span></div>
+          <h3>日本电视台番组「夏日！风的香气？兜风旅行！」</h3>
+          <div class="work-tags"><span>米哈游</span></div>
+          <p>让游戏IP进入日本电视台综艺语境，把版本主题、旅行叙事和大众娱乐节目结构连接起来。</p>
+          
+          
+        </div>
+      </article>
+    
+      <article class="featured-card " id="featured-genshin-fuji-yearend-special">
         <a class="featured-media" href="https://www.bilibili.com/video/BV1LYrxYrELB/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-fuji-yearend-special.jpg" alt="原神 富士电视台年末全国地上波特别节目 封面" loading="lazy" />
           <span>全国地上波特别节目</span>
         </a>
         <div class="featured-copy">
-          <div class="meta-line"><span>地上波 / 节目</span><span>地上波合作内容</span></div>
+          <div class="meta-line"><span>Bilibili</span></div>
           <h3>原神 富士电视台年末全国地上波特别节目</h3>
+          <div class="work-tags"><span>米哈游</span><span>原神</span></div>
           <p>把原神IP带入年末地上波节目场景，让游戏内容进入日本大众娱乐渠道。</p>
           <p class="proof">富士台整体收视率2.0%、推定到达700万</p>
-          <div class="links-row"><a class="work-link" href="https://www.bilibili.com/video/BV1LYrxYrELB/" target="_blank" rel="noopener">Bilibili</a></div>
+          
+        </div>
+      </article>
+    
+      <article class="featured-card " id="featured-identityv-ijl-autumn-final-pr">
+        <a class="featured-media" href="https://youtu.be/4wJOcPI23yw?si=Qtx9P06e7fsqts5E" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-ijl-autumn-final-pr.jpg" alt="第五人格 IJL 秋季决赛 PR 封面" loading="lazy" />
+          <span>赛事品牌PV</span>
+        </a>
+        <div class="featured-copy">
+          <div class="meta-line"><span>导演 / 赛事PV</span><span>YouTube</span></div>
+          <h3>第五人格 IJL 秋季决赛 PR</h3>
+          <div class="work-tags"><span>网易电竞</span><span>第五人格</span></div>
+          <p>以决赛节点为核心，把选手、赛事张力和联赛品牌包装成可传播的主视觉影像。</p>
+          
+          
+        </div>
+      </article>
+    
+      <article class="featured-card " id="featured-identityv-coa-opening-team-leader-trailer">
+        <a class="featured-media" href="https://www.youtube.com/watch?v=KeVhYV0-t_E" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-coa-opening-team-leader-trailer.jpg" alt="第五人格 COA V Opening Team Leader Trailer 封面" loading="lazy" />
+          <span>世界赛开场PV</span>
+        </a>
+        <div class="featured-copy">
+          <div class="meta-line"><span>导演 / 舞台包装</span><span>YouTube</span></div>
+          <h3>第五人格 COA V Opening Team Leader Trailer</h3>
+          <div class="work-tags"><span>网易电竞</span><span>第五人格</span></div>
+          <p>以队长和战队身份为叙事入口，把世界赛开场、选手登场和品牌包装合并成单支主推PV。</p>
+          
+          
+        </div>
+      </article>
+    
+      <article class="featured-card " id="featured-pay4dream-aigc-workstation">
+        <a class="featured-media" href="https://pay4dream.github.io/" target="_blank" rel="noopener">
+          <img src="assets/works/pay4dream-aigc-workstation.png" alt="Pay4Dream AIGC 创意工作站 封面" loading="lazy" />
+          <span>自研工具 / 生成导演工作台</span>
+        </a>
+        <div class="featured-copy">
+          <div class="meta-line"><span>产品设计 / 工具开发 / AI工作流</span><span>外发页面 / AgentHunt</span></div>
+          <h3>Pay4Dream AIGC 创意工作站</h3>
+          <div class="work-tags"><span>AI工具项目</span><span>Pay4Dream</span><span>AIGC</span></div>
+          <p>把视觉参考、音乐方向、分镜推演、素材实验和自动化脚本沉淀成可复用的生成导演工作台，展示对新工具和新事物的主动掌控。</p>
+          
+          <div class="links-row"><a class="work-link" href="https://pay4dream.github.io/" target="_blank" rel="noopener">Pay4Dream</a><a class="work-link" href="https://agenthunt.mihoyo.com/agents/pay4dream" target="_blank" rel="noopener">AgentHunt</a></div>
         </div>
       </article>
     
       </div>
     </section>
 
+
     <section class="wrap" id="archive">
       <div class="section-head">
-        <h2>全量作品</h2>
-        <p>这部分保留所有作品入口，不用“精选”替代全量。每张卡片都带公开链接与缩略图，可按作品形态快速筛选。</p>
+        <h2>更多作品</h2>
       </div>
       <div class="filters" aria-label="作品筛选">
-        <button class="filter-btn active" type="button" data-filter="全部">全部</button><button class="filter-btn" type="button" data-filter="MV / 音乐 / 声优">MV / 音乐 / 声优</button><button class="filter-btn" type="button" data-filter="PV / 角色">PV / 角色</button><button class="filter-btn" type="button" data-filter="TVC / CM">TVC / CM</button><button class="filter-btn" type="button" data-filter="UGC / PUGC">UGC / PUGC</button><button class="filter-btn" type="button" data-filter="其他IP">其他IP</button><button class="filter-btn" type="button" data-filter="地上波 / 节目">地上波 / 节目</button><button class="filter-btn" type="button" data-filter="联动 / 线下">联动 / 线下</button>
+        <button class="filter-btn active" type="button" data-filter="全部">全部</button><button class="filter-btn" type="button" data-filter="TVC">TVC</button><button class="filter-btn" type="button" data-filter="UGC/PUGC">UGC/PUGC</button><button class="filter-btn" type="button" data-filter="PGC">PGC</button><button class="filter-btn" type="button" data-filter="电视/综艺节目">电视/综艺节目</button><button class="filter-btn" type="button" data-filter="影视作品">影视作品</button><button class="filter-btn" type="button" data-filter="网易电竞">网易电竞</button><button class="filter-btn" type="button" data-filter="AI工具项目">AI工具项目</button><button class="filter-btn" type="button" data-filter="其他商业作品">其他商业作品</button><button class="filter-btn" type="button" data-filter="学生时期作品">学生时期作品</button>
       </div>
       <div class="archive-grid" id="archiveGrid">
         
-      <article class="archive-card" data-category="TVC / CM" data-title="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」">
+      <article class="archive-card" id="work-genshin-41-anniversary-tvc" data-category="TVC" data-title="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1U84y1U7uS/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-41-anniversary-tvc.jpg" alt="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」 封面" loading="lazy" />
+          <img src="assets/works/genshin-41-anniversary-tvc.png" alt="原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">TVC / CM · 真人实拍 TVC</div>
+          <div class="archive-kicker">TVC · 真人实拍 TVC</div>
           <h3>原神 4.1宣传短片 / 三周年TVC「所感所想，撼动于心」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>从三周年节点切入，把版本情绪、角色记忆和真人影像语言组织成玩家可感知的品牌内容。</p>
-          <div class="mini-tags"><span>导演 / 真人实拍TVC管线主导</span><span>发行线 / 制作公司 / 声优旁白</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1U84y1U7uS/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>导演 / 真人实拍TVC管线主导</span><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="地上波 / 节目" data-title="日本电视台番组「夏日！风的香气？兜风旅行！」">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
-          <img src="assets/works/ntv-drive-trip.jpg" alt="日本电视台番组「夏日！风的香气？兜风旅行！」 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">地上波 / 节目 · 地上波综艺特番</div>
-          <h3>日本电视台番组「夏日！风的香气？兜风旅行！」</h3>
-          <p>让游戏IP进入日本电视台综艺语境，把版本主题、旅行叙事和大众娱乐节目结构连接起来。</p>
-          <div class="mini-tags"><span>B2B商务 / 节目方向 / 内容创意</span><span>日本电视台 / 综艺制作</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="TVC / CM" data-title="原神 2024新年特别TVC「丘丘人的新年假期三部曲」">
+      <article class="archive-card" id="work-genshin-new-year-2024" data-category="TVC" data-title="原神 2024新年特别TVC「丘丘人的新年假期三部曲」">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1ye411q7Ld/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
           <img src="assets/works/genshin-new-year-2024.jpg" alt="原神 2024新年特别TVC「丘丘人的新年假期三部曲」 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">TVC / CM · 新年短片 / Shorts 系列</div>
+          <div class="archive-kicker">TVC · 新年短片 / Shorts 系列</div>
           <h3>原神 2024新年特别TVC「丘丘人的新年假期三部曲」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用连续短片结构承接新年情绪，把节庆内容做成可分发、可连续观看的系列化素材。</p>
-          <div class="mini-tags"><span>真人实拍TVC管线</span><span>Bilibili / YouTube Shorts</span></div>
+          <div class="mini-tags"><span>Bilibili / YouTube</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1ye411q7Ld/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a><a class="work-link" href="https://youtube.com/shorts/U20OWWVyYYs?si=jKpefFSYd-u8u5Eb" target="_blank" rel="noopener">Shorts 01</a><a class="work-link" href="https://youtube.com/shorts/og0oYhkqC7A?si=LZCx0QvdDUr_TatW" target="_blank" rel="noopener">Shorts 02</a><a class="work-link" href="https://youtube.com/shorts/YZ0TcNZYfIo?si=OiscZOEOe_IJ8l5O" target="_blank" rel="noopener">Shorts 03</a></div>
         </div>
       </article>
     
-      <article class="archive-card" data-category="MV / 音乐 / 声优" data-title="原神 全球校园活动回顾MV">
-        <a class="archive-thumb" href="https://youtu.be/WCmlWuIS7sU?si=HVepGVLtxGv1vu2L" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-campus-mv.jpg" alt="原神 全球校园活动回顾MV 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">MV / 音乐 / 声优 · 活动回顾 MV</div>
-          <h3>原神 全球校园活动回顾MV</h3>
-          <p>把线下校园活动的参与感沉淀为可传播的回顾影像，延展IP与年轻用户的情感连接。</p>
-          <div class="mini-tags"><span>活动影像内容</span><span>全球校园活动 / YouTube</span></div>
-          <div class="links-row small"><a class="work-link" href="https://youtu.be/WCmlWuIS7sU?si=HVepGVLtxGv1vu2L" target="_blank" rel="noopener">YouTube</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="MV / 音乐 / 声优" data-title="原神 声优节目实拍升级特别节目">
-        <a class="archive-thumb" href="https://youtu.be/73FAioSDp1k?si=HqDkvKmxFvvmOFfO" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-va-special.jpg" alt="原神 声优节目实拍升级特别节目 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">MV / 音乐 / 声优 · 声优节目 / 实拍升级</div>
-          <h3>原神 声优节目实拍升级特别节目</h3>
-          <p>围绕声优内容的观看体验做实拍升级，让角色、演员和粉丝之间的连接更具现场感。</p>
-          <div class="mini-tags"><span>节目内容升级</span><span>声优 / YouTube</span></div>
-          <div class="links-row small"><a class="work-link" href="https://youtu.be/73FAioSDp1k?si=HqDkvKmxFvvmOFfO" target="_blank" rel="noopener">YouTube</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神 纳塔AR项目">
-        <a class="archive-thumb" href="https://youtu.be/6tXRbD6idAI?si=Io9FZOyMzfVT4G17" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-natlan-ar.jpg" alt="原神 纳塔AR项目 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · AR体验 / 传播内容</div>
-          <h3>原神 纳塔AR项目</h3>
-          <p>把版本视觉与现实空间结合，为纳塔版本传播增加可拍、可分享的体验型入口。</p>
-          <div class="mini-tags"><span>本地化体验内容</span><span>AR / YouTube</span></div>
-          <div class="links-row small"><a class="work-link" href="https://youtu.be/6tXRbD6idAI?si=Io9FZOyMzfVT4G17" target="_blank" rel="noopener">YouTube</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="TVC / CM" data-title="原神 5.0TVC「燃动纳塔」">
+      <article class="archive-card" id="work-genshin-50-blaze-natlan" data-category="TVC" data-title="原神 5.0TVC「燃动纳塔」">
         <a class="archive-thumb" href="https://youtu.be/eibWLZ0kZGw?si=6jIwJnUw2n0PxCs0" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-50-blaze-natlan.jpg" alt="原神 5.0TVC「燃动纳塔」 封面" loading="lazy" />
+          <img src="assets/works/genshin-50-blaze-natlan.png" alt="原神 5.0TVC「燃动纳塔」 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">TVC / CM · 版本TVC</div>
+          <div class="archive-kicker">TVC · 版本TVC</div>
           <h3>原神 5.0TVC「燃动纳塔」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用TVC语法放大纳塔版本的速度、热度与视觉冲击，是大型版本传播中的关键影像入口。</p>
-          <div class="mini-tags"><span>全球版本传播内容</span><span>版本资产 / YouTube</span></div>
-          <div class="links-row small"><a class="work-link" href="https://youtu.be/eibWLZ0kZGw?si=6jIwJnUw2n0PxCs0" target="_blank" rel="noopener">YouTube</a></div>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="MV / 音乐 / 声优" data-title="原神音乐会2023「无际之旅的旋律」">
-        <a class="archive-thumb" href="https://youtu.be/SC57e3VB_ZQ?si=33liHMrIpGt367xy" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-concert-2023.jpg" alt="原神音乐会2023「无际之旅的旋律」 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">MV / 音乐 / 声优 · 音乐会影像</div>
-          <h3>原神音乐会2023「无际之旅的旋律」</h3>
-          <p>用音乐会形态承接IP长期情感资产，让玩家记忆从游戏内容延伸到现场演出和音乐叙事。</p>
-          <div class="mini-tags"><span>音乐内容传播</span><span>官方音乐会 / YouTube</span></div>
-          <div class="links-row small"><a class="work-link" href="https://youtu.be/SC57e3VB_ZQ?si=33liHMrIpGt367xy" target="_blank" rel="noopener">YouTube</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="PV / 角色" data-title="原神 角色预告「兹白：常身归于世」">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV11a6bBsEXw" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-character-teaser-zibai.jpg" alt="原神 角色预告「兹白：常身归于世」 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">PV / 角色 · 角色预告</div>
-          <h3>原神 角色预告「兹白：常身归于世」</h3>
-          <p>以角色预告片承载版本人物认知，把叙事、视觉和角色记忆点浓缩进短时长内容。</p>
-          <div class="mini-tags"><span>角色传播内容</span><span>Bilibili</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV11a6bBsEXw" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="联动 / 线下" data-title="Tabelog x Genshin 联动PV">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-tabelog.jpg" alt="Tabelog x Genshin 联动PV 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 实拍动画结合PV</div>
-          <h3>Tabelog x Genshin 联动PV</h3>
-          <p>把餐厅探索、页面玩法、线下体验和角色表达整合为完整用户体验，是IP进入本地生活场景的代表案例。</p>
-          <div class="mini-tags"><span>内容负责人</span><span>Tabelog / 本地生活 / 线上线下素材</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="MV / 音乐 / 声优" data-title="原神《月光的彼岸》哥伦比娅日配新曲MV">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener">
-          <img src="assets/works/columbina-moonlight-mv.jpg" alt="原神《月光的彼岸》哥伦比娅日配新曲MV 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">MV / 音乐 / 声优 · 旗舰MV</div>
-          <h3>原神《月光的彼岸》哥伦比娅日配新曲MV</h3>
-          <p>围绕角色、音乐和PUGC动画团队协作，把声优演唱、角色情绪和创作者表达整合成旗舰音乐内容。</p>
-          <div class="mini-tags"><span>总监制</span><span>动画团队 / 音乐团队 / 声优</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="TVC / CM" data-title="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）">
+      <article class="archive-card" id="work-genshin-moon-class" data-category="TVC" data-title="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1uZHDzAE22" target="_blank" rel="noopener">
           <img src="assets/works/genshin-moon-class.jpg" alt="原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人） 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">TVC / CM · 日本本土明星TVC</div>
+          <div class="archive-kicker">TVC · 日本本土明星TVC</div>
           <h3>原神 挪德卡莱电视广告「月之课堂」（出演：贺来贤人）</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把版本信息大众化，以日本本土演员和课堂设定降低理解门槛，服务更广泛的市场认知。</p>
-          <div class="mini-tags"><span>JP TVC / 本地明星内容</span><span>艺人 / 日本市场</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1uZHDzAE22" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="UGC / PUGC" data-title="原神 JP UGC竖屏短剧「末路厨神」">
-        <a class="archive-thumb" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-tiktok-drama.png" alt="原神 JP UGC竖屏短剧「末路厨神」 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">UGC / PUGC · TikTok原生竖屏短剧</div>
-          <h3>原神 JP UGC竖屏短剧「末路厨神」</h3>
-          <p>以美食为媒介描写IP和玩家间的羁绊，把真人实拍影视化转译为适配短视频平台的连续短剧。</p>
-          <div class="mini-tags"><span>编剧 / 导演 / 主导落地</span><span>TikTok / 第三方创作者矩阵</span></div>
-          <div class="links-row small"><a class="work-link" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">TikTok Lite</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7594750384195767573" target="_blank" rel="noopener">预告</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7605216689411640577" target="_blank" rel="noopener">第12话</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神×Jagariko 联动">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1fu7z6nEKA/" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-jagariko.jpg" alt="原神×Jagariko 联动 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · FMCG联动内容</div>
-          <h3>原神×Jagariko 联动</h3>
-          <p>将IP角色语气和零食消费场景结合，形成轻量、高识别度的日本本地品牌触点。</p>
-          <div class="mini-tags"><span>本地品牌联动</span><span>Calbee / Jagariko</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1fu7z6nEKA/" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="其他IP" data-title="星穹铁道爵士之夜「S.P.A.R.K.L.E」">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1fT421k7dW/" target="_blank" rel="noopener">
-          <img src="assets/works/hsr-jazz-night.png" alt="星穹铁道爵士之夜「S.P.A.R.K.L.E」 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">其他IP · 线上音乐节目</div>
-          <h3>星穹铁道爵士之夜「S.P.A.R.K.L.E」</h3>
-          <p>用爵士现场和角色内容结合，服务跨IP音乐表达与玩家社群观看。</p>
-          <div class="mini-tags"><span>音乐节目内容</span><span>HoYo-MiX / 线上演出</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1fT421k7dW/" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="其他IP" data-title="崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1qf421o7Cu/" target="_blank" rel="noopener">
-          <img src="assets/works/hsr-galaxy-ranger-trailer.jpg" alt="崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">其他IP · 电影预告片</div>
-          <h3>崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告</h3>
-          <p>以电影预告片语法包装游戏内容，把角色、世界观和娱乐类型感压缩成高密度观看入口。</p>
-          <div class="mini-tags"><span>预告片内容</span><span>跨IP团队 / Bilibili</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1qf421o7Cu/" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="其他IP" data-title="绝区零 公测纪念TVCM">
+      <article class="archive-card" id="work-zzz-launch-tvcm" data-category="TVC" data-title="绝区零 公测纪念TVCM">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1Y4421D7fs/" target="_blank" rel="noopener">
           <img src="assets/works/zzz-launch-tvcm.jpg" alt="绝区零 公测纪念TVCM 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">其他IP · 上线TVCM</div>
+          <div class="archive-kicker">TVC · 上线TVCM</div>
           <h3>绝区零 公测纪念TVCM</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>绝区零</span></div>
           <p>服务新IP公测节点，用TVCM建立日本市场第一波大众认知。</p>
-          <div class="mini-tags"><span>日本市场内容</span><span>新IP公测 / Bilibili</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1Y4421D7fs/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="TVC / CM" data-title="原神「与玛薇卡同行」">
+      <article class="archive-card" id="work-genshin-stand-with-mavuika" data-category="TVC" data-title="原神「与玛薇卡同行」">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1d46BYgEJY/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-stand-with-mavuika.jpg" alt="原神「与玛薇卡同行」 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">TVC / CM · 角色真人广告</div>
+          <div class="archive-kicker">TVC · 角色真人广告</div>
           <h3>原神「与玛薇卡同行」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>围绕玛薇卡角色气质做真人广告表达，把角色情绪转化为更具冲击力的观看记忆。</p>
-          <div class="mini-tags"><span>角色传播内容</span><span>Bilibili</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1d46BYgEJY/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神 东京晴空塔联动PV">
+      <article class="archive-card" id="work-genshin-tabelog" data-category="UGC/PUGC" data-title="Tabelog x Genshin 联动PV">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1oCrHBoE4d" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-tabelog.jpg" alt="Tabelog x Genshin 联动PV 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">UGC/PUGC · 实拍动画结合PV</div>
+          <h3>Tabelog x Genshin 联动PV</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>把餐厅探索、页面玩法、线下体验和角色表达整合为完整用户体验，是IP进入本地生活场景的代表案例。</p>
+          <div class="mini-tags"><span>内容负责人</span><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-duolingo-ultimate-lesson" data-category="UGC/PUGC" data-title="原神 x 多邻国-Duolingo 合作PV《终极课程》「究極のレッスン」The Ultimate Lesson">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1Zx2yBKE46/" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-duolingo-ultimate-lesson.png" alt="原神 x 多邻国-Duolingo 合作PV《终极课程》「究極のレッスン」The Ultimate Lesson 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">UGC/PUGC · 异业合作PV</div>
+          <h3>原神 x 多邻国-Duolingo 合作PV《终极课程》「究極のレッスン」The Ultimate Lesson</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>把语言学习产品的幽默感与原神IP语境结合，用合作PV承接跨品牌话题和玩家社群传播。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-tiktok-drama" data-category="UGC/PUGC" data-title="原神 JP UGC竖屏短剧「末路厨神」">
+        <a class="archive-thumb" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-tiktok-drama.png" alt="原神 JP UGC竖屏短剧「末路厨神」 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">UGC/PUGC · TikTok原生竖屏短剧</div>
+          <h3>原神 JP UGC竖屏短剧「末路厨神」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>以美食为媒介描写IP和玩家间的羁绊，把真人实拍影视化转译为适配短视频平台的连续短剧。</p>
+          <div class="mini-tags"><span>编剧 / 导演 / 主导落地</span><span>TikTok</span></div>
+          <div class="links-row small"><a class="work-link" href="https://lite.tiktok.com/t/ZSaPavyAv/" target="_blank" rel="noopener">TikTok Lite</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7594750384195767573" target="_blank" rel="noopener">预告</a><a class="work-link" href="https://www.tiktok.com/@doramamiru3/video/7605216689411640577" target="_blank" rel="noopener">第12话</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-jagariko" data-category="UGC/PUGC" data-title="原神×Jagariko 联动">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1fu7z6nEKA/" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-jagariko.jpg" alt="原神×Jagariko 联动 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">UGC/PUGC · FMCG联动内容</div>
+          <h3>原神×Jagariko 联动</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>将IP角色语气和零食消费场景结合，形成轻量、高识别度的日本本地品牌触点。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-skytree" data-category="UGC/PUGC" data-title="原神 东京晴空塔联动PV">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV13e411i7qy/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-skytree.jpg" alt="原神 东京晴空塔联动PV 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 目的地联动PV</div>
+          <div class="archive-kicker">UGC/PUGC · 目的地联动PV</div>
           <h3>原神 东京晴空塔联动PV</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把城市地标与IP体验连接起来，让线下联动从活动信息变成可传播的目的地叙事。</p>
-          <div class="mini-tags"><span>线下联动内容</span><span>东京晴空塔 / 旅游场景</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV13e411i7qy/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="其他IP" data-title="绝区零 × 街霸6 制作人对谈">
+      <article class="archive-card" id="work-zzz-street-fighter-talk" data-category="UGC/PUGC" data-title="绝区零 × 街霸6 制作人对谈">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV18r421F7dG/" target="_blank" rel="noopener">
           <img src="assets/works/zzz-street-fighter-talk.jpg" alt="绝区零 × 街霸6 制作人对谈 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">其他IP · 制作人对谈</div>
+          <div class="archive-kicker">UGC/PUGC · 制作人对谈</div>
           <h3>绝区零 × 街霸6 制作人对谈</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>绝区零</span></div>
           <p>用制作人对谈服务跨作品社群认知，让联动从话题曝光延伸到创作者与玩家都能理解的内容背书。</p>
-          <div class="mini-tags"><span>跨社区内容</span><span>制作人 / 玩家社区</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV18r421F7dG/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="联动 / 线下" data-title="寿司郎 × 原神小短片：卡齐娜和早柚">
+      <article class="archive-card" id="work-genshin-sushiro-short-film-series" data-category="UGC/PUGC" data-title="寿司郎 × 原神小短片系列">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV12jHUzHEzF/" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-sushiro-kachina-sayu.jpg" alt="寿司郎 × 原神小短片：卡齐娜和早柚 封面" loading="lazy" />
+          <img src="assets/works/genshin-sushiro-short-film-series.jpg" alt="寿司郎 × 原神小短片系列 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 餐饮联动短片</div>
-          <h3>寿司郎 × 原神小短片：卡齐娜和早柚</h3>
-          <p>以角色互动切入餐饮选择场景，让线下合作的消费动作获得更自然的IP语境。</p>
-          <div class="mini-tags"><span>联动传播内容</span><span>寿司郎 / 角色短片</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV12jHUzHEzF/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="archive-kicker">UGC/PUGC · 餐饮联动短片系列</div>
+          <h3>寿司郎 × 原神小短片系列</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>将同一餐饮联动下的角色短片合并呈现，用连续角色组合承接线下消费场景，让合作内容形成系列记忆而不是零散物料。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV12jHUzHEzF/" target="_blank" rel="noopener">卡齐娜和早柚</a><a class="work-link" href="https://www.bilibili.com/video/BV1mCYAzxE63/" target="_blank" rel="noopener">欧罗伦和瑞希</a></div>
         </div>
       </article>
     
-      <article class="archive-card" data-category="联动 / 线下" data-title="寿司郎 × 原神小短片：欧罗伦和瑞希">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1mCYAzxE63/" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-sushiro-ororon-mizuki.jpg" alt="寿司郎 × 原神小短片：欧罗伦和瑞希 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 餐饮联动短片</div>
-          <h3>寿司郎 × 原神小短片：欧罗伦和瑞希</h3>
-          <p>延续同一联动语境，用角色组合和餐饮场景扩充短片矩阵。</p>
-          <div class="mini-tags"><span>联动传播内容</span><span>寿司郎 / 角色短片</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1mCYAzxE63/" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神×谜案「谁是盟友，谁是敌人？」">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1qdCrYZEGQ/" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-mystery-game.jpg" alt="原神×谜案「谁是盟友，谁是敌人？」 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 悬疑逃脱游戏</div>
-          <h3>原神×谜案「谁是盟友，谁是敌人？」</h3>
-          <p>用悬疑和逃脱游戏机制承接IP世界观，让用户参与从观看转向解谜与现场体验。</p>
-          <div class="mini-tags"><span>互动内容</span><span>谜案 / 线下体验</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1qdCrYZEGQ/" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神 × 寿司郎 联动动画：心海、五郎">
+      <article class="archive-card" id="work-genshin-sushiro-kokomi-gorou" data-category="UGC/PUGC" data-title="原神 × 寿司郎 联动动画：心海、五郎">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1ix4y1k7tw/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-sushiro-kokomi-gorou.jpg" alt="原神 × 寿司郎 联动动画：心海、五郎 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 餐饮联动动画</div>
+          <div class="archive-kicker">UGC/PUGC · 餐饮联动动画</div>
           <h3>原神 × 寿司郎 联动动画：心海、五郎</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>用动画形式让角色进入餐饮联动场景，提升合作内容的可看性与记忆点。</p>
-          <div class="mini-tags"><span>联动传播内容</span><span>寿司郎 / 角色动画</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1ix4y1k7tw/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神 × 有马温泉 联动宣传CM">
+      <article class="archive-card" id="work-genshin-arima-onsen" data-category="UGC/PUGC" data-title="原神 × 有马温泉 联动宣传CM">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1SvPueyEpu/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-arima-onsen.jpg" alt="原神 × 有马温泉 联动宣传CM 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 温泉 / 旅游联动CM</div>
+          <div class="archive-kicker">UGC/PUGC · 温泉 / 旅游联动CM</div>
           <h3>原神 × 有马温泉 联动宣传CM</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把温泉目的地和IP体验结合，服务区域旅行场景中的品牌触点。</p>
-          <div class="mini-tags"><span>目的地联动内容</span><span>有马温泉 / 旅游场景</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1SvPueyEpu/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      <article class="archive-card" data-category="地上波 / 节目" data-title="纳塔集合！玩原神的人「原人」观察 #3">
-        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1VH4meEEXV/" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-genjin-observation.jpg" alt="纳塔集合！玩原神的人「原人」观察 #3 封面" loading="lazy" />
-        </a>
-        <div class="archive-copy">
-          <div class="archive-kicker">地上波 / 节目 · 节目 / 熟肉内容</div>
-          <h3>纳塔集合！玩原神的人「原人」观察 #3</h3>
-          <p>用观察类节目结构承接玩家文化，把版本传播与用户画像放到更大众化的观看语境中。</p>
-          <div class="mini-tags"><span>节目传播内容</span><span>纳塔版本 / Bilibili</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1VH4meEEXV/" target="_blank" rel="noopener">Bilibili</a></div>
-        </div>
-      </article>
-    
-      <article class="archive-card" data-category="联动 / 线下" data-title="原神日服 × HELLO CYCLING 联动TVC">
+      <article class="archive-card" id="work-genshin-hellocycling" data-category="UGC/PUGC" data-title="原神日服 × HELLO CYCLING 联动TVC">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1vCFLefExy/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
-          <img src="assets/works/genshin-hellocycling.jpg" alt="原神日服 × HELLO CYCLING 联动TVC 封面" loading="lazy" />
+          <img src="assets/works/genshin-hellocycling.png" alt="原神日服 × HELLO CYCLING 联动TVC 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">联动 / 线下 · 出行联动TVC</div>
+          <div class="archive-kicker">UGC/PUGC · 出行联动TVC</div>
           <h3>原神日服 × HELLO CYCLING 联动TVC</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把共享单车、城市移动和版本视觉连接起来，为线下出行场景建立可见的IP触点。</p>
-          <div class="mini-tags"><span>本地出行品牌联动</span><span>HELLO CYCLING / 共享单车</span></div>
+          <div class="mini-tags"><span>Bilibili / 活动页</span></div>
           <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1vCFLefExy/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">Bilibili</a><a class="work-link" href="https://www.hellocycling.jp/campaign/genshin/" target="_blank" rel="noopener">活动页</a></div>
         </div>
       </article>
     
-      <article class="archive-card" data-category="地上波 / 节目" data-title="原神 富士电视台年末全国地上波特别节目">
+      <article class="archive-card" id="work-genshin-campus-mv" data-category="PGC" data-title="原神 全球校园活动回顾MV">
+        <a class="archive-thumb" href="https://youtu.be/WCmlWuIS7sU?si=HVepGVLtxGv1vu2L" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-campus-mv.jpg" alt="原神 全球校园活动回顾MV 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 活动回顾 MV</div>
+          <h3>原神 全球校园活动回顾MV</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>把线下校园活动的参与感沉淀为可传播的回顾影像，延展IP与年轻用户的情感连接。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-va-special" data-category="PGC" data-title="原神 声优节目实拍升级特别节目">
+        <a class="archive-thumb" href="https://youtu.be/73FAioSDp1k?si=HqDkvKmxFvvmOFfO" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-va-special.jpg" alt="原神 声优节目实拍升级特别节目 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 声优节目 / 实拍升级</div>
+          <h3>原神 声优节目实拍升级特别节目</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>围绕声优内容的观看体验做实拍升级，让角色、演员和粉丝之间的连接更具现场感。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-natlan-ar" data-category="PGC" data-title="原神 纳塔AR项目">
+        <a class="archive-thumb" href="https://youtu.be/6tXRbD6idAI?si=Io9FZOyMzfVT4G17" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-natlan-ar.jpg" alt="原神 纳塔AR项目 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · AR体验 / 传播内容</div>
+          <h3>原神 纳塔AR项目</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>把版本视觉与现实空间结合，为纳塔版本传播增加可拍、可分享的体验型入口。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-concert-2023" data-category="PGC" data-title="原神音乐会2023「无际之旅的旋律」">
+        <a class="archive-thumb" href="https://youtu.be/SC57e3VB_ZQ?si=33liHMrIpGt367xy" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-concert-2023.jpg" alt="原神音乐会2023「无际之旅的旋律」 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 音乐会影像</div>
+          <h3>原神音乐会2023「无际之旅的旋律」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>用音乐会形态承接IP长期情感资产，让玩家记忆从游戏内容延伸到现场演出和音乐叙事。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-character-teaser-zibai" data-category="PGC" data-title="原神 角色预告「兹白：常身归于世」">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV11a6bBsEXw" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-character-teaser-zibai.jpg" alt="原神 角色预告「兹白：常身归于世」 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 角色预告</div>
+          <h3>原神 角色预告「兹白：常身归于世」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>以角色预告片承载版本人物认知，把叙事、视觉和角色记忆点浓缩进短时长内容。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-columbina-moonlight-mv" data-category="PGC" data-title="原神《月光的彼岸》哥伦比娅日配新曲MV">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1CBrqBjEdw" target="_blank" rel="noopener">
+          <img src="assets/works/columbina-moonlight-mv.jpg" alt="原神《月光的彼岸》哥伦比娅日配新曲MV 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 旗舰MV</div>
+          <h3>原神《月光的彼岸》哥伦比娅日配新曲MV</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>围绕角色、音乐和PUGC动画团队协作，把声优演唱、角色情绪和创作者表达整合成旗舰音乐内容。</p>
+          <div class="mini-tags"><span>总监制</span><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-hsr-jazz-night" data-category="PGC" data-title="星穹铁道爵士之夜「S.P.A.R.K.L.E」">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1fT421k7dW/" target="_blank" rel="noopener">
+          <img src="assets/works/hsr-jazz-night.png" alt="星穹铁道爵士之夜「S.P.A.R.K.L.E」 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 线上音乐节目</div>
+          <h3>星穹铁道爵士之夜「S.P.A.R.K.L.E」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>崩坏：星穹铁道</span></div>
+          <p>用爵士现场和角色内容结合，服务跨IP音乐表达与玩家社群观看。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-hsr-galaxy-ranger-trailer" data-category="PGC" data-title="崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1qf421o7Cu/" target="_blank" rel="noopener">
+          <img src="assets/works/hsr-galaxy-ranger-trailer.jpg" alt="崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">PGC · 电影预告片</div>
+          <h3>崩坏：星穹铁道「决战！大宇宙开拓豪侠传」电影预告</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>崩坏：星穹铁道</span></div>
+          <p>以电影预告片语法包装游戏内容，把角色、世界观和娱乐类型感压缩成高密度观看入口。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-ntv-drive-trip" data-category="电视/综艺节目" data-title="日本电视台番组「夏日！风的香气？兜风旅行！」">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1KexteyEdW/?share_source=copy_web&amp;vd_source=a77c268766696b05ba99c463c7c980f1" target="_blank" rel="noopener">
+          <img src="assets/works/ntv-drive-trip.jpg" alt="日本电视台番组「夏日！风的香气？兜风旅行！」 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">电视/综艺节目 · 地上波综艺特番</div>
+          <h3>日本电视台番组「夏日！风的香气？兜风旅行！」</h3>
+          <div class="work-tags compact"><span>米哈游</span></div>
+          <p>让游戏IP进入日本电视台综艺语境，把版本主题、旅行叙事和大众娱乐节目结构连接起来。</p>
+          <div class="mini-tags"><span>B2B商务 / 节目方向 / 内容创意</span><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-mystery-game" data-category="电视/综艺节目" data-title="原神×谜案「谁是盟友，谁是敌人？」">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1qdCrYZEGQ/" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-mystery-game.jpg" alt="原神×谜案「谁是盟友，谁是敌人？」 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">电视/综艺节目 · 悬疑逃脱游戏</div>
+          <h3>原神×谜案「谁是盟友，谁是敌人？」</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>用悬疑和逃脱游戏机制承接IP世界观，让用户参与从观看转向解谜与现场体验。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-genjin-observation" data-category="电视/综艺节目" data-title="纳塔集合！玩原神的人「原人」观察 #3">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1VH4meEEXV/" target="_blank" rel="noopener">
+          <img src="assets/works/genshin-genjin-observation.jpg" alt="纳塔集合！玩原神的人「原人」观察 #3 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">电视/综艺节目 · 节目 / 熟肉内容</div>
+          <h3>纳塔集合！玩原神的人「原人」观察 #3</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
+          <p>用观察类节目结构承接玩家文化，把版本传播与用户画像放到更大众化的观看语境中。</p>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-genshin-fuji-yearend-special" data-category="电视/综艺节目" data-title="原神 富士电视台年末全国地上波特别节目">
         <a class="archive-thumb" href="https://www.bilibili.com/video/BV1LYrxYrELB/" target="_blank" rel="noopener">
           <img src="assets/works/genshin-fuji-yearend-special.jpg" alt="原神 富士电视台年末全国地上波特别节目 封面" loading="lazy" />
         </a>
         <div class="archive-copy">
-          <div class="archive-kicker">地上波 / 节目 · 全国地上波特别节目</div>
+          <div class="archive-kicker">电视/综艺节目 · 全国地上波特别节目</div>
           <h3>原神 富士电视台年末全国地上波特别节目</h3>
+          <div class="work-tags compact"><span>米哈游</span><span>原神</span></div>
           <p>把原神IP带入年末地上波节目场景，让游戏内容进入日本大众娱乐渠道。</p>
-          <div class="mini-tags"><span>地上波合作内容</span><span>富士电视台 / 全国播出</span></div>
-          <div class="links-row small"><a class="work-link" href="https://www.bilibili.com/video/BV1LYrxYrELB/" target="_blank" rel="noopener">Bilibili</a></div>
+          <div class="mini-tags"><span>Bilibili</span></div>
+          
         </div>
       </article>
     
-      </div>
-      <p class="source-note">全部作品已匹配公开封面 / 缩略图。 所有外部链接均以新窗口打开。</p>
-    </section>
-
-    <section class="system" id="system">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>能力结构</h2>
-          <p>作品集的重点不是堆视频，而是让审阅者看到：影像判断、品牌转译、外部合作和新工具工作流如何共同服务日本市场的真实传播。</p>
+      <article class="archive-card" id="work-director-waves-riding-winds" data-category="影视作品" data-title="《波に乗る風たち》">
+        <a class="archive-thumb" href="https://youtu.be/C3g2j7ps02M" target="_blank" rel="noopener">
+          <img src="assets/works/director-waves-riding-winds.jpg" alt="《波に乗る風たち》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">影视作品 · 短片 / 2021</div>
+          <h3>《波に乗る風たち》</h3>
+          <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
+          <p>在日本语境下完成的导演作品，保留跨文化创作与现场执行能力的直接证据。</p>
+          <div class="mini-tags"><span>编剧 / 导演</span><span>YouTube</span></div>
+          
         </div>
-        <div class="system-grid">
-          <div class="system-panel">
-            <h3>Operating Model</h3>
-            <p>从版本资产与用户文化出发，定义可被日本市场理解的内容语境；再把电视台、艺人/声优、品牌方、制作公司、创作者与平台接口组织进同一套执行结构。结果不是一次性素材，而是能在多个触点重复出现的品牌记忆。</p>
-            <p>AI工作流用于概念验证、视觉参考、分镜推演、音乐方向和跨平台创意生产，目标是提高判断速度与方案密度，而不是替代创意责任。</p>
-          </div>
-          <div class="cap-grid">
-            <div><b>品牌转译</b><span>把全球IP资产翻译为日本市场可理解、可传播、可合作的表达。</span></div>
-            <div><b>娱乐接口</b><span>对接电视台、艺人/声优、品牌方、代理商、制作公司和创作者生态。</span></div>
-            <div><b>影像导演</b><span>用镜头、节奏和制作判断保护作品质感，让内容先被看见。</span></div>
-            <div><b>新工具掌控</b><span>把LLM、AIGC和自研工具沉淀为更快的创意生产与验证流程。</span></div>
-          </div>
+      </article>
+    
+      <article class="archive-card" id="work-director-nezumi-san" data-category="影视作品" data-title="老鼠三郎 / ネズミさん（电影《十四天》终章）">
+        <a class="archive-thumb" href="https://youtu.be/0RuRRSXd78Q" target="_blank" rel="noopener">
+          <img src="assets/works/director-nezumi-san.jpg" alt="老鼠三郎 / ネズミさん（电影《十四天》终章） 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">影视作品 · 电影片段 / 2020</div>
+          <h3>老鼠三郎 / ネズミさん（电影《十四天》终章）</h3>
+          <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
+          <p>电影《十四天》终章片段，以角色、情境和节奏推进小体量故事，是导演作品履历中的独立条目。</p>
+          <div class="mini-tags"><span>编剧 / 导演</span><span>YouTube</span></div>
+          
         </div>
+      </article>
+    
+      <article class="archive-card" id="work-doc-children-abroad" data-category="影视作品" data-title="《他乡的童年》">
+        <a class="archive-thumb" href="https://v.youku.com/v_show/id_XNDMzMTI2OTc4NA==.html" target="_blank" rel="noopener">
+          <img src="assets/works/doc-children-abroad.jpg" alt="《他乡的童年》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">影视作品 · 纪录片 / 2020</div>
+          <h3>《他乡的童年》</h3>
+          <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
+          <p>以纪录片摄影参与跨地域儿童成长议题的现场拍摄，体现纪实影像判断与现场协作能力。</p>
+          <div class="mini-tags"><span>摄影</span><span>Youku</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-doc-lee-komaki-series" data-category="影视作品" data-title="《我是李小牧》">
+        <a class="archive-thumb" href="https://youtube.com/playlist?list=PLyeAIOB0BmwFLkLIV-oNswaS11zaUVBLU&amp;si=ZzDFf830AAoOfP5g" target="_blank" rel="noopener">
+          <img src="assets/works/doc-lee-komaki-series.jpg" alt="《我是李小牧》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">影视作品 · 纪录片系列 / 2020</div>
+          <h3>《我是李小牧》</h3>
+          <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
+          <p>以摄影身份参与人物纪录片系列，保留纪实影像现场判断与长期跟拍能力的公开片源。</p>
+          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-film-lastday-radio" data-category="影视作品" data-title="《末日电台》">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=vKTIPnXaOcE" target="_blank" rel="noopener">
+          <img src="assets/works/film-lastday-radio.jpg" alt="《末日电台》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">影视作品 · 短片 / 2020</div>
+          <h3>《末日电台》</h3>
+          <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
+          <p>以声音设计、录音与航拍参与短片制作，补充影像现场中的技术岗位履历。</p>
+          <div class="mini-tags"><span>声音设计 / 录音师 / 航拍师</span><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=vKTIPnXaOcE" target="_blank" rel="noopener">《末日电台》</a><a class="work-link" href="https://www.youtube.com/watch?v=edsTErCMpGE" target="_blank" rel="noopener">末日电台 Last Day</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-doc-give-me-a-little-sweet" data-category="影视作品" data-title="《给我一点甜》">
+        <a class="archive-thumb" href="https://youtu.be/VjTztJ-lBrc?si=h0BNCt1H1-G-FU-3" target="_blank" rel="noopener">
+          <img src="assets/works/doc-give-me-a-little-sweet.jpg" alt="《给我一点甜》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">影视作品 · 纪录片</div>
+          <h3>《给我一点甜》</h3>
+          <div class="work-tags compact"><span>影视作品</span><span>公开片源</span></div>
+          <p>公开纪录片作品入口，作为影视作品中的独立条目保留。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-identityv-ijl-autumn-final-pr" data-category="网易电竞" data-title="第五人格 IJL 秋季决赛 PR">
+        <a class="archive-thumb" href="https://youtu.be/4wJOcPI23yw?si=Qtx9P06e7fsqts5E" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-ijl-autumn-final-pr.jpg" alt="第五人格 IJL 秋季决赛 PR 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">网易电竞 · 赛事品牌PV</div>
+          <h3>第五人格 IJL 秋季决赛 PR</h3>
+          <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
+          <p>以决赛节点为核心，把选手、赛事张力和联赛品牌包装成可传播的主视觉影像。</p>
+          <div class="mini-tags"><span>导演 / 赛事PV</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-identityv-coa-opening-team-leader-trailer" data-category="网易电竞" data-title="第五人格 COA V Opening Team Leader Trailer">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=KeVhYV0-t_E" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-coa-opening-team-leader-trailer.jpg" alt="第五人格 COA V Opening Team Leader Trailer 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">网易电竞 · 世界赛开场PV</div>
+          <h3>第五人格 COA V Opening Team Leader Trailer</h3>
+          <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
+          <p>以队长和战队身份为叙事入口，把世界赛开场、选手登场和品牌包装合并成单支主推PV。</p>
+          <div class="mini-tags"><span>导演 / 舞台包装</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-identityv-esports-pv-system" data-category="网易电竞" data-title="第五人格 赛事品牌PV与舞台包装补充">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=jmnnMHgzMa0" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-esports-pv-system.jpg" alt="第五人格 赛事品牌PV与舞台包装补充 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">网易电竞 · 赛事PV / 舞台包装 / 选手登场</div>
+          <h3>第五人格 赛事品牌PV与舞台包装补充</h3>
+          <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
+          <p>补充展示同一赛事内容系统中的公开入口，保留联赛品牌、舞台包装和选手内容的持续建设证据。</p>
+          <div class="mini-tags"><span>导演 / 内容建设</span><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=jmnnMHgzMa0" target="_blank" rel="noopener">2023夏季IJL PV</a><a class="work-link" href="https://www.youtube.com/watch?v=wW7IX9nOGkI" target="_blank" rel="noopener">Team Stage Show Bumper</a><a class="work-link" href="https://www.youtube.com/watch?v=r9LL5G4rSHo" target="_blank" rel="noopener">COA V 韩国地区PV</a><a class="work-link" href="https://www.youtube.com/watch?v=oHDeqNhjJ-Q" target="_blank" rel="noopener">冠军奖杯</a><a class="work-link" href="https://www.youtube.com/watch?v=Nr1my3p36Ks" target="_blank" rel="noopener">COA V 世界决赛PV</a><a class="work-link" href="https://www.youtube.com/watch?v=tH_gAQSRM1g" target="_blank" rel="noopener">2022夏季Best3</a><a class="work-link" href="https://www.youtube.com/watch?v=relIkHYx5IA" target="_blank" rel="noopener">2022秋季Opening</a><a class="work-link" href="https://www.youtube.com/watch?v=qNj1_jeu--c" target="_blank" rel="noopener">2023 IJL Autumn PV</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-identityv-esports-documentary" data-category="网易电竞" data-title="第五人格 赛事纪录片与选手内容">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=Yjwt7qU8kUw" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-esports-documentary.jpg" alt="第五人格 赛事纪录片与选手内容 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">网易电竞 · 赛事纪录片 / 选手密着 / 社群内容</div>
+          <h3>第五人格 赛事纪录片与选手内容</h3>
+          <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
+          <p>围绕选手、战队和赛事情绪建立叙事，让电竞内容从赛果传播延展到人物与社群关系。</p>
+          <div class="mini-tags"><span>导演 / 纪录片内容</span><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=Yjwt7qU8kUw" target="_blank" rel="noopener">COA V 决胜纪录片</a><a class="work-link" href="https://www.youtube.com/watch?v=i-jbfKwjgVA" target="_blank" rel="noopener">SST_Alf 密着</a><a class="work-link" href="https://www.youtube.com/watch?v=O5KtkBjjR38" target="_blank" rel="noopener">SZ_Sinami 密着</a><a class="work-link" href="https://www.youtube.com/watch?v=sA45PYsVcDM" target="_blank" rel="noopener">2022 IJL Autumn Documentary</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-identityv-esports-live-variety" data-category="网易电竞" data-title="第五人格 现场节目与联赛直播内容">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=9KpO7N3QgCQ" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-esports-live-variety.jpg" alt="第五人格 现场节目与联赛直播内容 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">网易电竞 · 直播节目 / 综艺 / 开幕式</div>
+          <h3>第五人格 现场节目与联赛直播内容</h3>
+          <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
+          <p>从联赛直播、现场节目到艺人开幕式，支撑日本电竞内容从直播技术到节目化表达的搭建。</p>
+          <div class="mini-tags"><span>舞台导演 / 直播内容</span><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=9KpO7N3QgCQ" target="_blank" rel="noopener">旅IJL 第3回</a><a class="work-link" href="https://www.youtube.com/watch?v=dAqeYAtsNpE" target="_blank" rel="noopener">IJLスター運動会2022</a><a class="work-link" href="https://www.youtube.com/watch?v=hfm3kAYCx2E" target="_blank" rel="noopener">DEAN FUJIOKA 开幕式</a><a class="work-link" href="https://www.youtube.com/watch?v=rbdAyAH30ag" target="_blank" rel="noopener">2022秋季IJL Playoff Day1</a><a class="work-link" href="https://www.youtube.com/watch?v=vxtfcvNd6oY" target="_blank" rel="noopener">2022夏季IJL 决胜战</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-identityv-esports-music-fan-content" data-category="网易电竞" data-title="第五人格 音乐与粉丝向内容">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=mSc_ZMaPmww" target="_blank" rel="noopener">
+          <img src="assets/works/identityv-esports-music-fan-content.jpg" alt="第五人格 音乐与粉丝向内容 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">网易电竞 · 主题曲 / 推理剧场 / 粉丝向内容</div>
+          <h3>第五人格 音乐与粉丝向内容</h3>
+          <div class="work-tags compact"><span>网易电竞</span><span>第五人格</span></div>
+          <p>把联赛节点、音乐内容和粉丝向叙事结合，补足电竞内容的情绪记忆与社群传播。</p>
+          <div class="mini-tags"><span>内容导演 / 协作推进</span><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=mSc_ZMaPmww" target="_blank" rel="noopener">COA VI「未来エコー」</a><a class="work-link" href="https://www.youtube.com/watch?v=9lEOpM513ME" target="_blank" rel="noopener">2021秋季IVC推理劇場</a><a class="work-link" href="https://www.youtube.com/watch?v=MCMU8ekalY0" target="_blank" rel="noopener">V for Victory</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-pay4dream-aigc-workstation" data-category="AI工具项目" data-title="Pay4Dream AIGC 创意工作站">
+        <a class="archive-thumb" href="https://pay4dream.github.io/" target="_blank" rel="noopener">
+          <img src="assets/works/pay4dream-aigc-workstation.png" alt="Pay4Dream AIGC 创意工作站 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">AI工具项目 · 自研工具 / 生成导演工作台</div>
+          <h3>Pay4Dream AIGC 创意工作站</h3>
+          <div class="work-tags compact"><span>AI工具项目</span><span>Pay4Dream</span><span>AIGC</span></div>
+          <p>把视觉参考、音乐方向、分镜推演、素材实验和自动化脚本沉淀成可复用的生成导演工作台，展示对新工具和新事物的主动掌控。</p>
+          <div class="mini-tags"><span>产品设计 / 工具开发 / AI工作流</span><span>外发页面 / AgentHunt</span></div>
+          <div class="links-row small"><a class="work-link" href="https://pay4dream.github.io/" target="_blank" rel="noopener">Pay4Dream</a><a class="work-link" href="https://agenthunt.mihoyo.com/agents/pay4dream" target="_blank" rel="noopener">AgentHunt</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-more-nikke-public-content" data-category="其他商业作品" data-title="NIKKE 相关公开内容">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=pjMS3rUpja0" target="_blank" rel="noopener">
+          <img src="assets/works/more-nikke-public-content.jpg" alt="NIKKE 相关公开内容 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">其他商业作品 · PV / SNS内容</div>
+          <h3>NIKKE 相关公开内容</h3>
+          <div class="work-tags compact"><span>其他商业作品</span><span>NIKKE</span></div>
+          <p>作为其他商业作品中的公开片源入口保留。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=pjMS3rUpja0" target="_blank" rel="noopener">半周年纪念视频</a><a class="work-link" href="https://www.youtube.com/watch?v=R9rW0ijLLQw" target="_blank" rel="noopener">ドロシー50年前のエピソード</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-more-commercial-game-pv" data-category="其他商业作品" data-title="商业 / 游戏PV补充">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=gbCh8Sgnk7U" target="_blank" rel="noopener">
+          <img src="assets/works/more-commercial-game-pv.jpg" alt="商业 / 游戏PV补充 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">其他商业作品 · PV / 广告内容</div>
+          <h3>商业 / 游戏PV补充</h3>
+          <div class="work-tags compact"><span>其他商业作品</span><span>CODM</span></div>
+          <p>作为其他商业作品中的公开片源入口保留，只展示可公开访问的视频链接。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-more-hitoritabi-series" data-category="其他商业作品" data-title="一人旅系列">
+        <a class="archive-thumb" href="https://www.youtube.com/watch?v=EUTge7eleqE" target="_blank" rel="noopener">
+          <img src="assets/works/more-hitoritabi-series.jpg" alt="一人旅系列 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">其他商业作品 · 旅行影像系列 / 公开片源</div>
+          <h3>一人旅系列</h3>
+          <div class="work-tags compact"><span>其他商业作品</span></div>
+          <p>将 Shinjuku Gyoen 与 KaguraSki 两支旅行影像合并为同一系列入口，展示轻量旅行内容与运动场景下的个人影像样本。</p>
+          <div class="mini-tags"><span>YouTube</span></div>
+          <div class="links-row small"><a class="work-link" href="https://www.youtube.com/watch?v=EUTge7eleqE" target="_blank" rel="noopener">一人旅 - Shinjuku Gyoen</a><a class="work-link" href="https://www.youtube.com/watch?v=k7AWZxFSRg4" target="_blank" rel="noopener">一人旅 - KaguraSki</a></div>
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-doc-qinzhongjian" data-category="学生时期作品" data-title="《琴中剑》">
+        <a class="archive-thumb" href="https://youtu.be/LOotJkpp8ck" target="_blank" rel="noopener">
+          <img src="assets/works/doc-qinzhongjian.jpg" alt="《琴中剑》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">学生时期作品 · 纪录片 / 2016</div>
+          <h3>《琴中剑》</h3>
+          <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
+          <p>学生时期武侠短片摄影作品，补充导演作品之外的类型片现场履历。</p>
+          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-director-jiangcheng" data-category="学生时期作品" data-title="《江城》">
+        <a class="archive-thumb" href="https://youtu.be/xKuscbnKHEo" target="_blank" rel="noopener">
+          <img src="assets/works/director-jiangcheng.jpg" alt="《江城》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">学生时期作品 · 短片 / 2015</div>
+          <h3>《江城》</h3>
+          <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
+          <p>本科毕业作品，以城市经验和人物关系为核心展开叙事。获首届“中山杯”微电影大赛最佳新人影片奖。</p>
+          <div class="mini-tags"><span>剧本 / 导演</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-director-lengjiang" data-category="学生时期作品" data-title="《冷江》">
+        <a class="archive-thumb" href="https://youtu.be/JLOfGyJ_14A" target="_blank" rel="noopener">
+          <img src="assets/works/director-lengjiang.jpg" alt="《冷江》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">学生时期作品 · 短片 / 2015</div>
+          <h3>《冷江》</h3>
+          <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
+          <p>学生时期短片摄影作品，作为早期影像现场与摄影执行能力的公开片源入口保留。</p>
+          <div class="mini-tags"><span>摄影</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-film-remian" data-category="学生时期作品" data-title="《热面》">
+        <a class="archive-thumb" href="https://youtu.be/WoLZV8_MWZg" target="_blank" rel="noopener">
+          <img src="assets/works/film-remian.jpg" alt="《热面》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">学生时期作品 · 短片 / 2015</div>
+          <h3>《热面》</h3>
+          <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
+          <p>学生时期短片现场作品，担任摄影、灯光与声音设计，体现一线制作环节的综合执行能力。</p>
+          <div class="mini-tags"><span>摄影 / 灯光 / 声音设计</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-director-dream-of-love" data-category="学生时期作品" data-title="《爱之梦》">
+        <a class="archive-thumb" href="https://youtu.be/U_1ApfYWa04" target="_blank" rel="noopener">
+          <img src="assets/works/director-dream-of-love.jpg" alt="《爱之梦》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">学生时期作品 · 短片 / 2014</div>
+          <h3>《爱之梦》</h3>
+          <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
+          <p>大三导演课作业。获 2014 华人草根创意微电影金善奖金奖，并获最佳导演、最佳摄影、最佳剪辑、最佳音效、最佳美术设计等技术类奖项提名。</p>
+          <div class="mini-tags"><span>剧本 / 导演 / 摄影 / 剪辑 / 配乐</span><span>YouTube</span></div>
+          
+        </div>
+      </article>
+    
+      <article class="archive-card" id="work-director-woxi-detective" data-category="学生时期作品" data-title="《我系侦探》">
+        <a class="archive-thumb" href="https://www.bilibili.com/video/BV1JZE76AEyS/" target="_blank" rel="noopener">
+          <img src="assets/works/director-woxi-detective.jpg" alt="《我系侦探》 封面" loading="lazy" />
+        </a>
+        <div class="archive-copy">
+          <div class="archive-kicker">学生时期作品 · 短片 / 2012</div>
+          <h3>《我系侦探》</h3>
+          <div class="work-tags compact"><span>学生时期作品</span><span>公开片源</span></div>
+          <p>大二电影摄影课与剪辑课联合作业。获首届佳能全国高校影像作品大赛铜奖，入围第 21 届北京大学生电影节原创作品大赛。</p>
+          <div class="mini-tags"><span>编剧 / 导演 / 摄影</span><span>Bilibili</span></div>
+          
+        </div>
+      </article>
+    
       </div>
     </section>
   </main>
