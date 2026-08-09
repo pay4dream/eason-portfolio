@@ -182,11 +182,8 @@
     .showcase-lane + .showcase-lane { border-top:1px solid var(--line); }
     .showcase-lane-head { margin-bottom:15px; }
     .showcase-lane-head h3 { margin:0; font-size:21px; line-height:1.25; font-weight:720; }
-    .showcase-track { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(300px,calc((100% - 36px)/3)); gap:18px; min-width:0; max-width:100%; padding:0 0 14px; overflow-x:auto; overflow-y:hidden; overscroll-behavior-inline:contain; scroll-snap-type:inline mandatory; scrollbar-color:var(--line-strong) transparent; scrollbar-width:thin; }
-    .showcase-track:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
-    .showcase-track::-webkit-scrollbar { height:7px; }
-    .showcase-track::-webkit-scrollbar-thumb { background:var(--line-strong); border-radius:999px; }
-    .showcase-card { min-width:0; overflow:hidden; display:flex; flex-direction:column; scroll-snap-align:start; border:1px solid var(--line); background:rgba(255,250,241,.78); transition:border-color .2s ease; }
+    .showcase-track { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; min-width:0; max-width:100%; padding:0 0 14px; }
+    .showcase-card { min-width:0; overflow:hidden; display:flex; flex-direction:column; border:1px solid var(--line); background:rgba(255,250,241,.78); transition:border-color .2s ease; }
     .showcase-card:hover { border-color:rgba(183,53,45,.56); }
     .showcase-media { position:relative; display:block; aspect-ratio:16/10; overflow:hidden; border-bottom:1px solid var(--line); background:#e7e3da; }
     .showcase-context { display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; gap:5px; padding:22px; background:#171a1f; color:#f4f0e8; text-align:left; }
@@ -247,7 +244,7 @@
       .tile-4 { grid-column:1; grid-row:3; }
       .tile-5 { grid-column:1 / 3; grid-row:4; }
       .archive-grid, .featured-grid { grid-template-columns:1fr 1fr; }
-      .showcase-track { grid-auto-columns:minmax(290px,calc((100% - 18px)/2)); }
+      .showcase-track { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
     @media (max-width: 640px) {
       .wrap, .nav { width:min(100% - 26px, 1240px); }
@@ -271,7 +268,7 @@
       .showcase-panel { padding-top:26px; }
       .showcase-panel-head h3 { font-size:28px; }
       .showcase-lane { padding-top:24px; }
-      .showcase-track { grid-auto-columns:minmax(280px,86vw); gap:12px; }
+      .showcase-track { grid-template-columns:minmax(0,1fr); gap:12px; }
       .esports-lanes { grid-template-columns:1fr; }
       .esports-lane { padding:14px; }
       .featured-media { min-height:260px; }
@@ -528,7 +525,7 @@
           <div class="showcase-lane-head">
             <h3 data-i18n-text="品牌联动">品牌联动</h3>
           </div>
-          <div class="showcase-track" role="list" tabindex="0" aria-label="品牌联动" data-i18n-aria-label="品牌联动">
+          <div class="showcase-track" role="list" aria-label="品牌联动" data-i18n-aria-label="品牌联动">
             <article class="showcase-card" id="visual-jagariko-series" role="listitem"
         data-source-ids="P17|P28" data-evidence-tier="related"
         data-absorbed-source-ids="O17|O34"
@@ -634,7 +631,7 @@
           <div class="showcase-lane-head">
             <h3 data-i18n-text="城市与活动">城市与活动</h3>
           </div>
-          <div class="showcase-track" role="list" tabindex="0" aria-label="城市与活动" data-i18n-aria-label="城市与活动">
+          <div class="showcase-track" role="list" aria-label="城市与活动" data-i18n-aria-label="城市与活动">
             <article class="showcase-card" id="visual-three-city-towers" role="listitem"
         data-source-ids="P22" data-evidence-tier="context"
         data-absorbed-source-ids=""
@@ -689,7 +686,7 @@
           <div class="showcase-lane-head">
             <h3 data-i18n-text="版本视觉">版本视觉</h3>
           </div>
-          <div class="showcase-track" role="list" tabindex="0" aria-label="版本视觉" data-i18n-aria-label="版本视觉">
+          <div class="showcase-track" role="list" aria-label="版本视觉" data-i18n-aria-label="版本视觉">
             <article class="showcase-card" id="visual-tsuki-no-arikae" role="listitem"
         data-source-ids="P26|V06" data-evidence-tier="personal"
         data-absorbed-source-ids=""
@@ -763,7 +760,7 @@
           <div class="showcase-lane-head">
             <h3 data-i18n-text="展会与演出">展会与演出</h3>
           </div>
-          <div class="showcase-track" role="list" tabindex="0" aria-label="展会与演出" data-i18n-aria-label="展会与演出">
+          <div class="showcase-track" role="list" aria-label="展会与演出" data-i18n-aria-label="展会与演出">
             <article class="showcase-card" id="campaign-genshin-concert-2024-japan" role="listitem"
         data-source-ids="O13" data-evidence-tier="context"
         data-absorbed-source-ids=""
@@ -818,7 +815,7 @@
           <div class="showcase-lane-head">
             <h3 data-i18n-text="城市与地方巡回">城市与地方巡回</h3>
           </div>
-          <div class="showcase-track" role="list" tabindex="0" aria-label="城市与地方巡回" data-i18n-aria-label="城市与地方巡回">
+          <div class="showcase-track" role="list" aria-label="城市与地方巡回" data-i18n-aria-label="城市与地方巡回">
             <article class="showcase-card" id="campaign-tsuki-no-arikae" role="listitem"
         data-source-ids="O31" data-evidence-tier="personal"
         data-absorbed-source-ids=""
@@ -1714,15 +1711,6 @@
     const onMotionChange = () => carouselControllers.forEach((controller) => controller.syncMotionPreference());
     if (reducedMotionQuery.addEventListener) reducedMotionQuery.addEventListener('change', onMotionChange);
     else reducedMotionQuery.addListener(onMotionChange);
-
-    document.querySelectorAll('.showcase-track').forEach((track) => {
-      track.addEventListener('keydown', (event) => {
-        if (event.target !== track || (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')) return;
-        event.preventDefault();
-        const direction = event.key === 'ArrowLeft' ? -1 : 1;
-        track.scrollBy({ left: direction * Math.max(240, track.clientWidth * 0.75), behavior: 'smooth' });
-      });
-    });
 
     const buttons = Array.from(document.querySelectorAll('.filter-btn'));
     const cards = Array.from(document.querySelectorAll('.archive-card'));
